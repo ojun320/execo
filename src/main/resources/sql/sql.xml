@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sql">
+	<select id="test" resultType="hashmap">
+      select '테스트' as data
+   </select>
+
+   <!--뉴스 리스트 (뉴스 리스트 가져올때 사용) -->
+   <select id="selectList" resultType="hashmap" parameterType="hashmap">
+      select * from new ORDER BY no DESC limit #{start}, #{viewRow};
+   </select>
+   
+   <!-- 게시글 개수 구하기 -->
+   <select id="totCnt" resultType="hashmap">
+      select count(*) as tot from new
+   </select>
+   
+   <!--뉴스 글 등록 (뉴스 새글 등록시 사용) -->
+   <insert id="InsertNews" parameterType="hashmap">
+      insert into new(title, contents, days,picName,picPath, fileName, filePath) values(#{title}, #{content}, #{days},#{picName},#{picPath}, #{name}, #{path})
+   </insert>
+  
+   <!--특정 게시글 자세히보기 (선택한 뉴스 글 데이터 가져올 때 사용) -->
+   <select id="selectDetail" resultType="hashmap" parameterType="hashmap">
+      select m.*
+        , (select no from new where no = (m.`no` - 1)) as re 
+        , (select title from new where no = (m.`no` - 1)) as re_title 
+        , (select no from new where no = (m.`no` + 1)) as nt
+        , (select title from new where no = (m.`no` + 1)) as nt_title
+     from new as m where m.no= #{newsNo}
+   </select>
+    <!--뉴스글 수정 (뉴스 게시글 수정 시 사용) -->
+   <update id="updateNews" parameterType="hashmap">
+      update new set title=#{title}, contents=#{content}, days=#{days}, picName=#{picName}, picPath=#{picPath}, fileName=#{name}, filePath=#{path}  where no = #{no};
+   </update>
+</mapper>
+
+

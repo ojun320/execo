@@ -1,0 +1,16 @@
+.qpsysub_news {
+	width: 319px;
+    height: 205px;
+    float: left;
+    background-color: white;
+}
+
+td {
+	text-align: center;
+	font-size: 14.3px;
+}
+
+td a {
+	text-decoration: none;
+}
+

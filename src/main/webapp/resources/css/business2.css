@@ -1,0 +1,51 @@
+.businessbody2 {
+    width: 1903px;
+    height: 2894px;
+    background-color: #f0f0f0;
+}
+
+/*****************************************************************/
+
+.lsrmainimg2{
+    width: 1903px;
+    height: 350px;
+    background-color: white;
+}
+
+.lsrmainimg2 img {
+    margin-top: 4px;
+}
+
+/*****************************************************************/
+
+.lsrtext2{
+    width: 1903px;
+    height: 75px;
+    background-color: #f0f0f0;
+}
+
+.lsrtext2 h1 {
+    margin: 0px;
+    margin-left: 850px;
+    line-height: 70px;
+    font-size: 20px;
+}
+
+/*****************************************************************/
+
+.lsrcontentsimg2 {
+    width: 960px;
+    height: 2439px;
+    background-color: #f0f0f0;
+    margin-left: 471.5px;
+}
+
+/*****************************************************************/
+
+.lsrfooterbar2 {
+    width: 1903px;
+    height: 30px;
+    background-color: #f0f0f0;
+}
+
+/*****************************************************************/

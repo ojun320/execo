@@ -1,0 +1,242 @@
+.introducelsr3body {
+    width: 1903px;
+    height: 2898px;
+    background-color: #f0f0f0;
+}
+
+/*****************************************************************/
+
+.introducelsr3menuimg{
+    width: 1903px;
+    height: 350px;
+    background-color: white;
+}
+
+.introducelsr3menuimg img {
+    margin-top: 4px;
+}
+
+/*****************************************************************/
+
+.introducelsr3txt{
+    width: 1903px;
+    height: 75px;
+    background-color: #f0f0f0;
+}
+
+.introducelsr3txt h1 {
+    margin: 0px;
+    margin-left: 850px;
+    line-height: 70px;
+    font-size: 20px;
+}
+
+/*****************************************************************/
+
+.introducelsr3box {
+    width: 960px;
+    height: 2258px;
+    margin-left: 471.5px;
+    background-color: #f0f0f0;
+}
+
+.introducelsr3btnbox {
+    width: 960px;
+    height: 60px;
+    background-color: #f0f0f0;
+}
+/*****************************************************************/
+
+.introducelsrbtnbox {
+    width: 960px;
+    height: 60px;
+    background-color: #f0f0f0;
+}
+
+.baumerproductimg1-1 {
+    width: 960px;
+    height: 416px;
+    float: left;
+}
+
+.baumerproductimg2-1 {
+    width: 67px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg2-2 {
+    width: 176px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg2-3 {
+    width: 102px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg2-4 {
+    width: 176px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg2-5 {
+    width: 100px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg2-6 {
+    width: 176px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg2-7 {
+    width: 163px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg3-1 {
+    width: 960px;
+    height: 183px;
+    float: left;
+}
+
+.baumerproductimg4-1 {
+    width: 960px;
+    height: 232px;
+    float: left;
+}
+
+.baumerproductimg5-1 {
+    width: 960px;
+    height: 257px;
+    float: left;
+}
+
+.baumerproductimg6-1 {
+    width: 56px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg6-2 {
+    width: 176px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg6-3 {
+    width: 48px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg6-4 {
+    width: 176px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg6-5 {
+    width: 47px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg6-6 {
+    width: 176px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg6-7 {
+    width: 48px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg6-8 {
+    width: 176px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg6-9 {
+    width: 57px;
+    height: 125px;
+    float: left;
+}
+
+.baumerproductimg7-1 {
+    width: 960px;
+    height: 296px;
+    float: left;
+}
+
+.baumerproductimg8-1 {
+    width: 960px;
+    height: 289px;
+    float: left;
+}
+
+
+/*****************************************************************/
+
+.loginbtm{
+    width: 800px;
+    height: 300px;
+    background-color: #f0f0f0;
+}
+
+.loginButton1 {
+    margin-top: 15px;
+    height: 32px;
+    width: 140px;
+    font: inherit; 
+    padding: 2px 4px; 
+    background-color: #eaeaea; 
+    border-width: 2px; border-style: solid; 
+    border-color: #f4f4f4 #a3a3a3 #a3a3a3 #f4f4f4; 
+
+    -webkit-border-radius: 3px; 
+       -moz-border-radius: 3px; 
+            border-radius: 3px;
+} 
+.loginButton1:hover {  background-color: #d2e3f4;  }
+.loginButton1:active {  border-color: #a3a3a3 #efefef #efefef #A3A3A3; } 
+
+.loginButton1:focus { 
+    outline: 2px solid #c1d6ef;
+    outline-offset: 1px;
+} 
+
+.loginButton2 {
+    margin-top: 80px;
+    margin-left: 50px;
+    height: 42px;
+    width: 130px;
+    font: inherit; 
+    padding: 2px 4px; 
+    background-color: #eaeaea; 
+    border-width: 2px; border-style: solid; 
+    border-color: #f4f4f4 #a3a3a3 #a3a3a3 #f4f4f4; 
+
+    -webkit-border-radius: 3px; 
+       -moz-border-radius: 3px; 
+            border-radius: 3px;
+} 
+.loginButton2:hover {  background-color: #d2e3f4;  }
+.loginButton2:active {  border-color: #a3a3a3 #efefef #efefef #A3A3A3; } 
+
+.loginButton2:focus { 
+    outline: 2px solid #c1d6ef;
+    outline-offset: 1px;
+} 
+
+/*****************************************************************/

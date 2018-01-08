@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="login">
+   <select id="getData" resultType="hashmap">
+      select * from user
+   </select>
+   <select id="getLoginData" parameterType="hashmap" resultType="hashmap">
+      select * from user where id = #{id} and pw = #{pw}
+   </select>
+   <select id="checkid" resultType="hashmap">
+      select * from user where id = #{id}
+   </select>
+   <insert id="getSignupData" parameterType="hashmap">
+      insert into user
+      (id,
+       pw,
+       email,
+       name,
+       phone,
+       auth)
+      values
+      (#{id},
+       #{pw},
+       #{email},
+       #{name},
+       #{phone},
+       #{auth})
+   </insert>
+</mapper>

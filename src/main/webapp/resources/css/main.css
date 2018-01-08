@@ -1,0 +1,541 @@
+body{ 
+    width:1903px;
+    max-width:1903px;
+    min-width: 300px;
+    margin : 0px;
+    position: relative;
+}
+
+header{
+    width: 100%;
+    height: 119px;    
+    background-color: black;
+}
+
+footer {
+    width : 1903px;
+    height: 97px;
+    background-color : black;
+}
+
+.logoutbox hr{
+	margin: 5px;
+}
+
+.logoutbox span{
+	font-size: 20px;
+	color: black;
+}
+
+#label {
+	font-size: 15px;
+	width: 131px;
+	height: 71px;
+}
+/*--------------------------상단헤더부분----------------------------*/
+
+.maintopbox{
+    width: 1903px;
+    height: 119px;
+    background: -webkit-linear-gradient(#bcbcbc, #e6e6e6);
+    background: -o-linear-gradient(#bcbcbc, #e6e6e6);
+    background: -moz-linear-gradient(#bcbcbc, #e6e6e6);
+    background: linear-gradient(#bcbcbc, #e6e6e6);
+}
+
+.maintopimg{
+    cursor: pointer;
+    width: 160px;
+    height: 119px;
+    background: -webkit-linear-gradient(#bcbcbc, #e6e6e6);
+    background: -o-linear-gradient(#bcbcbc, #e6e6e6);
+    background: -moz-linear-gradient(#bcbcbc, #e6e6e6);
+    background: linear-gradient(#bcbcbc, #e6e6e6);
+    margin-left: 300px;
+    padding-top: 30px;
+    float: left;
+}
+
+
+
+/*------------------------------메뉴박스------------------------------*/
+nav {
+	margin: 0px auto; 
+	text-align: center;
+    margin-left: 60px;
+    margin-top: 10px;
+    float: left;
+}
+nav ul ul {
+	display: none;
+}
+nav ul li:hover > ul {
+		display: block;
+}
+nav ul {
+	background: #efefef; 
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	padding: 0 20px;
+	border-radius: 10px;  
+	list-style: none;
+	position: relative;
+	display: inline-table;
+    z-index: 1;
+}
+nav ul:after {
+	content: ""; clear: both; display: block;
+}
+nav ul li {
+	float: left;
+}
+nav ul li:hover {
+	background: #4b545f;
+	background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+	background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+    background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+}
+nav ul li:hover a {
+    color: #fff;
+}
+nav ul li a {
+	display: block; padding: 25px 40px;
+	color: #757575; text-decoration: none;
+}
+		
+	
+nav ul ul {
+	background: #5f6975; border-radius: 0px; padding: 0;
+	position: absolute; top: 100%;
+}
+nav ul ul li {
+    float: none; 
+	border-top: 1px solid #6b727c;
+	border-bottom: 1px solid #575f6a; position: relative;
+}
+nav ul ul li a {
+    padding: 15px 40px;
+    color: #fff;
+}	
+nav ul ul li a:hover {
+    background: #4b545f;
+}
+		
+nav ul ul ul {
+	position: absolute; left: 100%; top:0;
+}
+
+nav ul li ul li ul li {
+    height: 60px;
+    width: 10vw;
+}
+
+/*-------------------------로그인, 회원가입 버튼 ---------------------------*/
+
+
+nav1 {
+	margin: 0px auto; 
+	text-align: center;
+    margin-left: 270px;
+    margin-top: 10px;
+    float: left;
+}
+nav1 ul ul {
+	display: none;
+}
+nav1 ul li:hover > ul {
+		display: block;
+}
+nav1 ul {
+	background: #efefef; 
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	padding: 0 20px;
+	border-radius: 10px;  
+	list-style: none;
+	position: relative;
+	display: inline-table;
+    z-index: 1;
+}
+nav1 ul:after {
+	content: ""; clear: both; display: block;
+}
+nav1 ul li {
+	float: left;
+}
+nav1 ul li:hover {
+	background: #4b545f;
+	background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+	background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+    background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+}
+nav1 ul li:hover a {
+    color: #fff;
+}
+nav1 ul li a {
+	display: block; padding: 25px 40px;
+	color: #757575; text-decoration: none;
+}
+		
+	
+nav1 ul ul {
+	background: #5f6975; border-radius: 0px; padding: 0;
+	position: absolute; top: 100%;
+}
+nav1 ul ul li {
+    float: none; 
+	border-top: 1px solid #6b727c;
+	border-bottom: 1px solid #575f6a; position: relative;
+}
+nav1 ul ul li a {
+    padding: 15px 40px;
+    color: #fff;
+}	
+nav1 ul ul li a:hover {
+    background: #4b545f;
+}
+		
+nav1 ul ul ul {
+	position: absolute; left: 100%; top:0;
+}
+
+
+/*-----------------------메뉴박스끝---------------------------*/
+
+
+
+
+
+/*---------------중간바디부분-----------------*/
+
+/*----------------중간바디-1-----------------*/
+
+* {box-sizing:border-box}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    height: 400px;
+    position: relative;
+    margin: 0px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3.5s;
+    animation-name: fade;
+    animation-duration: 3.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.text {font-size: 11px}
+}
+
+/*------------------------------------------*/
+/*----------------중간바디-2-----------------*/
+
+.mainmidbox2{
+    width: 1903px;
+    height: 612px;
+    background-color: #f0f0f0;
+}
+
+.centerbox {
+    background-color: gainsboro;
+    margin-left: 472.5px;
+    width: 958px;
+    height: 612px;
+}
+.centerbox p{
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    margin: 0px;
+    text-align: center;
+    line-height: 2.5;
+}
+
+
+/*------------------------------------------*/
+.clear-midbox1 {
+    width: 319px;
+    height: 15px;
+    background-color: #f0f0f0;
+    float: left;
+}
+.midbox1 {
+    width: 319px;
+    height: 612px;
+    background-color: #bebebe;
+    float: left;
+}
+.qnaboxx{
+    width: 319px;
+    height: 3px;
+}
+
+.qnabox {
+    width: 319px;
+    height: 34px;
+    background-color: white;
+    text-align: center;
+}
+.midbox1-1 {
+    width: 319px;
+    height: 208px;
+    background-color: white;
+    float: left;
+}
+.midbox1-2 {
+    width: 319px;
+    height: 166px;
+    background-color: white;
+    float: left;
+}
+.midbox1-3{
+    width: 319px;
+    height: 178px;
+    background-color: white;
+    float: left;
+}
+
+.customimg {
+    margin-left: 35px;
+}
+.midboxtop-1 {
+    width: 319px;
+    height: 35px;
+    background-color: #bcbcbc;
+}
+
+.videobox iframe{
+    width: 319px;
+    height: 131px;
+}
+/*------------------------------------------*/
+.midbox2 {
+    width: 15px;
+    height: 612px;
+    background-color: #f0f0f0;
+    float: left;
+}
+/*------------------------------------------*/
+.clear-midbox2{
+    width: 624px;
+    height: 15px;
+    background-color: #f0f0f0;
+    float: left;
+}
+.midbox3 {
+    width: 624px;
+    height: 612px;
+    background-color: #d0d0d0;
+    float: left;
+}
+.midbox3-1{
+    width: 624px;
+    height: 389px;
+    background-color: white;
+    float: left;
+}
+
+.midboxmid1{
+    width: 208px;
+    height: 354px;
+    background-color: white;
+    float: left;
+}
+
+.midboxmid1 img {
+    margin-left: 4px;
+}
+
+.midboxmid2{
+    width: 208px;
+    height: 354px;
+    background-color: white;
+    float: left;
+}
+
+.midboxmid2 img {
+    margin-left: 4px;
+}
+
+.midboxmid3{
+    width: 208px;
+    height: 354px;
+    background-color: white;
+    float: left;
+}
+
+.midboxmid3 img {
+    margin-left: 4px;
+}
+
+.midbox3-2{
+    width: 624px;
+    height: 178px;
+    background-color: white;
+    float: left;
+}
+
+.eventsbox {
+    width: 624px;
+    height: 143px;
+    float: left;
+    background-color: white;
+}
+
+.midboxtop-2{
+    width: 624px;
+    height: 35px;
+    background-color: #bebebe;
+}
+/*------------------------------------------*/
+
+
+.listimgbox1 img {
+	width: 114.8px;
+	height: 133px;
+	float: left;
+	cursor: pointer;
+	margin: 5px;
+}
+
+
+
+/*------------------------------------------*/
+
+.listimgbox-1 {
+	width: 960px;
+	height: 300px;
+}
+
+.listimgbox-1 img {
+	margin-left: 300px;
+	width: 280px;
+	height: 300px;
+}
+
+
+
+
+
+
+/*---------------하단푸터부분-----------------*/
+
+.mainbtmbox{
+    width: 1903px;
+    height: 97px;
+    background-color: rgb(231, 231, 231);;
+}
+
+.mainbtmimg{
+    cursor: pointer;
+    width: 180px;
+    height: 97px;
+    background-color: rgb(231, 231, 231);;
+    margin-left: 500px;
+    float: left;
+}
+
+.mainbtmimg img{
+    margin-top: 13px;
+}
+
+.mainbtmtxt{
+    width: 700px;
+    height: 77px;
+    background-color: rgb(231, 231, 231);;
+    float: left;
+    font-size: 12px;
+    padding-top: 12px;
+}
+
+.btmtxt{
+    margin: 6px;
+}
+
+
+.btnfont {
+    color: #666666;
+    font-size: 12px;
+    font-family: "'Malgun Gothic'","Dotum", "돋움", "Arial", "Helvetica", sans-serif;
+    letter-spacing: -1px;
+}
+
+/*------------------------------------------*/
+
+td:hover {
+	background-color: #b7d8ff;
+}
+
+
+/*-----------------------------버튼-----------------------------*/
+
+.myButton {
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 42px;
+    width: 130px;
+    font: inherit; 
+    padding: 2px 4px; 
+    background-color: #eaeaea; 
+    border-width: 2px; border-style: solid; 
+    border-color: #f4f4f4 #a3a3a3 #a3a3a3 #f4f4f4; 
+
+    -webkit-border-radius: 3px; 
+       -moz-border-radius: 3px; 
+            border-radius: 3px;
+} 
+.myButton:hover {  background-color: #d2e3f4;  }
+.myButton:active {  border-color: #a3a3a3 #efefef #efefef #A3A3A3; } 
+
+.myButton:focus { 
+    outline: 2px solid #c1d6ef;
+    outline-offset: 1px;
+} 
+
+/*-----------------------------버튼-----------------------------*/
