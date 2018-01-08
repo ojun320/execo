@@ -62,10 +62,10 @@ public class CustomerController {
 	}
 	
 		@RequestMapping(value = "/inwriting", method = RequestMethod.POST)
-	    public ModelAndView inwriting (HttpServletRequest req, ModelAndView mav,@RequestParam("file") MultipartFile[] file, @RequestParam("img") MultipartFile[] img){
+	    public ModelAndView inwriting (HttpServletRequest req, ModelAndView mav,@RequestParam("file") MultipartFile file, @RequestParam("img") MultipartFile img){
 		    HashMap<String, Object> map = new HashMap<String, Object>();
-		    System.out.println("img : "+img[0].getOriginalFilename());
-		    System.out.println("file : "+file[0].getOriginalFilename());
+		    System.out.println("img : "+img.getOriginalFilename());
+		    System.out.println("file : "+file.getOriginalFilename());
 		    System.out.println("req : "+req.getParameter("content"));
 	        JSONObject jsonObject = new JSONObject(); 
 		    jsonObject = JSONObject.fromObject(JSONSerializer.toJSON(nlsi.fileOutput(file, req,img)));

@@ -12,7 +12,7 @@ public interface NewsListServiceInterface {
 	
 	public HashMap<String,Object> inwriting(HashMap<String,Object> param);
 	
-	public HashMap<String, Integer> fileOutput(MultipartFile[] file, HttpServletRequest req, MultipartFile[] img);
+	public HashMap<String, Integer> fileOutput(MultipartFile file, HttpServletRequest req, MultipartFile img);
 	public HashMap<String, Integer> fileAdd(HashMap<String, Object> param);
 	
 	public HashMap<String, Object> Detail1(HashMap<String, Object> param);

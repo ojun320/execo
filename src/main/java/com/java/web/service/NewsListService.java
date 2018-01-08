@@ -62,20 +62,20 @@ public class NewsListService implements NewsListServiceInterface {
 		}
 
 	   @Override
-	   public HashMap<String, Integer> fileOutput(MultipartFile[] file, HttpServletRequest req, MultipartFile[] img) {
+	   public HashMap<String, Integer> fileOutput(MultipartFile file, HttpServletRequest req, MultipartFile img) {
 		 
 	      HashMap<String, Integer> map2 = new HashMap<String, Integer>();
 	      map = new HashMap<String, Object>();
 	      HashMap<String, Object> param = HttpUtil.getParameterMap(req);
-		  for(int i = 0; i < img.length; i++){
-		         String imgname = img[i].getOriginalFilename();
+//		  for(int i = 0; i < img.length; i++){
+		         String imgname = img.getOriginalFilename();
 		         String imgpath2 = "resources/images/";
 		         try {
-		            byte[] bytes = img[i].getBytes();
+		            byte[] bytes = img.getBytes();
 		            
 		            String imgpath = "";
 		            // 개발 툴에서만 사용 할것!
-		            imgpath = "C:/Users/GD/git/execo/execo/src/main/webapp/" + imgpath2;
+		            imgpath = "E:/GIT/execo/src/main/webapp/" + imgpath2;
 		            /*imgpath = req.getSession().getServletContext().getRealPath("/") + imgpath2;*/
 		            
 		            File f = new File(imgpath);
@@ -92,20 +92,19 @@ public class NewsListService implements NewsListServiceInterface {
 
 		         } catch (IOException e) {
 		            e.printStackTrace();
-		         } finally {
-		         }
-		      }
+		         } 
+//		      }
 		  
 		  
-	      for(int i = 0; i < file.length; i++){
-	         String name = file[i].getOriginalFilename();
+//	      for(int i = 0; i < file.length; i++){
+	         String name = file.getOriginalFilename();
 	         String path2 = "resources/upload/";
 	         try {
-	            byte[] bytes = file[i].getBytes();
+	            byte[] bytes = file.getBytes();
 	            
 	            String path = "";
 	            // 개발 툴에서만 사용 할것!
-	            path = "C:/Users/GD/git/execo/execo/src/main/webapp/" + path2;
+	            path = "E:/GIT/execo/src/main/webapp/" + path2;
 //	            path = req.getSession().getServletContext().getRealPath("/") + path2;
 	            
 	            File f = new File(path);
@@ -123,17 +122,19 @@ public class NewsListService implements NewsListServiceInterface {
 	               map.put("days", param.get("days"));
 	               map.put("content", param.get("content"));
 	               map.put("no", param.get("no"));
-	               System.out.println(map);
-	               if(("null").equals(param.get("no"))){
-	            	   map2 = fileAdd(map);
-	               }else{
-//	            	   map2 = fileUpdate(map);
-	               }
+	               
 	            }
 	         } catch (IOException e) {
 	            e.printStackTrace();
 	         }
-	      }
+//	      }
+	         
+         System.out.println(map);
+         if(("null").equals(param.get("no"))){
+      	   map2 = fileAdd(map);
+         }else{
+//          	   map2 = fileUpdate(map);
+         }
 	      
 	      return map2;
 	   }
