@@ -18,14 +18,12 @@
        pw,
        email,
        name,
-       phone,
-       auth)
+       phone)
       values
       (#{id},
        #{pw},
        #{email},
        #{name},
-       #{phone},
-       #{auth})
+       #{phone})
    </insert>
 </mapper>

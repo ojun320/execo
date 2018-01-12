@@ -26,7 +26,7 @@
 			}
 			init();
 			function htmlLoad(){
-		  		var url = "/web/" + hash.substr(1, hash.length)
+		  		var url = hash.substr(1, hash.length)
 		  		$("section").load(url);	
 		  	}
 			
@@ -121,13 +121,16 @@
 				hash= "#customer";
 		  		htmlLoad();
 		  	});
+			// 고객지원2 클릭했을시 hash전환
+			$("#customer1").off().on("click", function(){
+				hash= "#customer1";
+		  		htmlLoad();
+		  	});
 	/**************************************************************/			
-			
-			
-			
-			// 취소버튼 눌렀을때 model로 돌아가기
+			// 취소버튼 눌렀을때  돌아가기
 			$(".qpsyQbtn2").off().on("click", function(){
-				location.replace("model");
+				hash= "#notice";
+		  		htmlLoad();
 			});
 			
 			// 시작 부분...
@@ -170,7 +173,7 @@
 	    <header>
             <div class="maintopbox">
                 <div class="maintopimg">
-                	<a href = "model"><img src="/web/resources/img/TITLE_LOGO_1420616575.png"></a>
+                	<a href = "/"><img src="resources/img/TITLE_LOGO_1420616575.png"></a>
                 </div>
                 <nav>
                     <ul>
@@ -209,13 +212,10 @@
                                 <li><a href="#">채용정보</a></li>
                             </ul>
                         </li>
-                        <li id="customer"><a href="#" class="customer">고객지원</a>
                             <ul>
-                                <li><a href="#">카탈로그</a></li>
-                                <li id="customer"><a href="#" class="customer">new&events</a></li>
-                                <li><a href="#">질문과 답변</a></li>
-                                <li><a href="#">사진</a></li>
-                                <li><a href="#">견적문의</a></li>
+                                <li id="customer2"><a href="#" class="customer2">카탈로그</a></li>
+                                <li id="customer"><a href="#" class="customer">자료실</a></li>
+                                <li id="customer1"><a href="#" class="customer1">견적문의</a></li>
                             </ul>
                         </li>
                         
@@ -228,7 +228,7 @@
                         <li id ="signup"><a href="#" class="sgbtn">Signup</a></li>
                     </ul>
                     <ul class="logoutbox">
-                        <li id ="logout"><a href="/web/Logout" class="sglogout">Logout</a></li>
+                        <li id ="logout"><a href="Logout" class="sglogout">Logout</a></li>
                         <li id ="label"><span id = "idspan"></span>&nbsp;&nbsp;님<hr>환영합니다</li>
                     </ul>
                 </nav1>
@@ -275,7 +275,7 @@
     	<footer>
             <div class="mainbtmbox">
                 <div class="mainbtmimg">
-                    <a href = "model"><img src="/web/resources/img/TITLE_logo2_1420519158.png"></a>
+                    <a href = ""><img src="resources/img/TITLE_logo2_1420519158.png"></a>
                 </div>
                 <div class="mainbtmtxt">
                     <div class="btmtxt">상호 : 엑세코실업 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 대표자 : 한두원 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 사업장주소 : 경기도 고양시 일산동구 하늘마을로 158 대방트리플라온 B동 702호</div>

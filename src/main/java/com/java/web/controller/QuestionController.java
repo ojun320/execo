@@ -1,6 +1,5 @@
 package com.java.web.controller;
 
-import java.io.Console;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,10 +20,16 @@ public class QuestionController {
 
    @RequestMapping("/notice") //List 보여주기 
    public ModelAndView notice(ModelAndView mav, HttpSession session){                                            
-      HashMap<String, HashMap<String, Object>> id = (HashMap<String, HashMap<String, Object>>) session.getAttribute("id");     
-      mav.setViewName("notice");
-      return mav;
-   }
+      HashMap<String, HashMap<String, Object>> id = (HashMap<String, HashMap<String, Object>>) session.getAttribute("id");
+      HashMap<String, HashMap<String, Object>> user = (HashMap<String, HashMap<String, Object>>) session.getAttribute("user");
+      if(user == null){
+		  mav.setViewName("redirect:/alert");
+		  return mav;
+	  }else{		  
+		  mav.setViewName("notice"); //경로설정 확인
+	      return mav;
+	  }
+   }   
    
    @RequestMapping("/MasterPage1Search")//게시판 검색기능 
    public void masterPage1Search(HttpServletResponse response, HttpServletRequest req) {

@@ -28,14 +28,32 @@ public class CustomerController {
 	
 	
 	@RequestMapping("/customer") // 고객지원 new&events 화면
-	public ModelAndView customer(ModelAndView mav){
-		mav.setViewName("customer");
-	return mav;
-	}
+	public ModelAndView customer(ModelAndView mav, HttpSession session){
+		HashMap<String, HashMap<String, Object>> user = (HashMap<String, HashMap<String, Object>>) session.getAttribute("user");
+		if(user == null){
+			  mav.setViewName("redirect:/alert");
+			  return mav;
+		  }else{		  
+			  mav.setViewName("customer"); //경로설정 확인
+		      return mav;
+		  }
+	   }  
 	
 	@RequestMapping("/Write1") //글작성하기
 	public ModelAndView write(ModelAndView mav, HttpSession session){
 		mav.setViewName("Write1");
+	return mav;
+	}
+	
+	@RequestMapping("/customer1") //customer1 화면
+	public ModelAndView customer1(ModelAndView mav, HttpSession session){
+		mav.setViewName("customer1");
+	return mav;
+	}
+	
+	@RequestMapping("/customer2") //customer2 화면
+	public ModelAndView customer2(ModelAndView mav, HttpSession session){
+		mav.setViewName("customer2");
 	return mav;
 	}
 	
@@ -75,23 +93,26 @@ public class CustomerController {
 	  }
 		
 		@RequestMapping("/detail1")
-		   public ModelAndView detail1(ModelAndView mav, HttpServletRequest req, HttpSession session, HttpServletResponse resp){
-		        mav.setViewName("detail1"); 
-		         return mav;
-		      }
+		public ModelAndView detail1(ModelAndView mav, HttpServletRequest req, HttpSession session, HttpServletResponse resp){
+		    HashMap<String, HashMap<String, Object>> user = (HashMap<String, HashMap<String, Object>>) session.getAttribute("user");
+			if(user == null){
+				mav.setViewName("redirect:/alert");
+				return mav;
+			}else{
+				mav.setViewName("detail1"); 
+			    return mav;
+			}
+		}
 
-		 
-		   
-		   @RequestMapping("/newsDetail")
-		   public ModelAndView newsDetail(HttpServletRequest req, HttpSession session, HttpServletResponse resp){
-			   HashMap<String, Object> param = new HashMap<String, Object>();
-			   param.put("newsNo", Integer.parseInt(req.getParameter("newsNo")));
+		@RequestMapping("/newsDetail")
+		public ModelAndView newsDetail(HttpServletRequest req, HttpSession session, HttpServletResponse resp){
+			HashMap<String, Object> param = new HashMap<String, Object>();
+			param.put("newsNo", Integer.parseInt(req.getParameter("newsNo")));
 			   
-				HashMap<String, Object> map = new HashMap<String, Object>();
-		         map = nlsi.Detail1(param);
-		      
-		      return HttpUtil.makeHashToJsonModelAndView(map);
-		   }
-		
-	
+			HashMap<String, Object> map = new HashMap<String, Object>();
+		    map = nlsi.Detail1(param);
+		    
+		    return HttpUtil.makeHashToJsonModelAndView(map);
+		}
+
 }

@@ -17,7 +17,7 @@ public class MainController {
 	
 	public HashMap<String, Object> map;
 	
-	@RequestMapping("/model")
+	@RequestMapping("/")
 	public ModelAndView model(ModelAndView mav){
 		mav.setViewName("model");
 		HashMap<String, Object> map = msi.model();

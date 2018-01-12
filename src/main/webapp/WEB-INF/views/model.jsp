@@ -12,6 +12,7 @@
 <head>
 	<link rel = "stylesheet" href = "resources/css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
     <script type = "text/javascript">
         
     var ui = "";
@@ -25,7 +26,7 @@
 		}
 		
 		function htmlLoad(){
-	  		var url = "/web/" + hash.substr(1, hash.length)
+	  		var url = hash.substr(1, hash.length)
 	  		$("section").load(url);	
 	  	}
 		
@@ -126,9 +127,19 @@
 	  	});
 /**************************************************************/
 /********************** 고객지원 hash전환 **************************/
-		// 제품소개5 클릭했을시 hash전환
+		// 고객지원1 클릭했을시 hash전환
 		$("#customer").off().on("click", function(){
 			hash= "#customer";
+	  		htmlLoad();
+	  	});
+		// 고객지원2 클릭했을시 hash전환
+		$("#customer1").off().on("click", function(){
+			hash= "#customer1";
+	  		htmlLoad();
+	  	});
+		// 고객지원3 클릭했을시 hash전환
+		$("#customer2").off().on("click", function(){
+			hash= "#customer2";
 	  		htmlLoad();
 	  	});
 /**************************************************************/
@@ -154,7 +165,6 @@
 				$(".loginbox").hide();
 				$("#idspan").append(userid);  
 				Username = userid; 
-				
 			}else{
 				$(".loginbox").show();
 				$(".logoutbox").hide();            
@@ -175,7 +185,7 @@
     <header>
             <div class="maintopbox">
                 <div class="maintopimg">
-                	<a href = "model"><img src="/web/resources/img/TITLE_LOGO_1420616575.png"></a>
+                	<a href = ""><img src="resources/img/TITLE_LOGO_1420616575.png"></a>
                 </div>
                 <nav>
                     <ul>
@@ -216,11 +226,9 @@
                         </li>
                         <li id="customer"><a href="#" class="customer">고객지원</a>
                             <ul>
-                                <li><a href="#">카탈로그</a></li>
-                                <li id="customer"><a href="#" class="customer">new&events</a></li>
-                                <li><a href="#">질문과 답변</a></li>
-                                <li><a href="#">사진</a></li>
-                                <li><a href="#">견적문의</a></li>
+                                <li id="customer2"><a href="#" class="customer2">카탈로그</a></li>
+                                <li id="customer"><a href="#" class="customer">자료실</a></li>
+                                <li id="customer1"><a href="#" class="customer1">견적문의</a></li>
                             </ul>
                         </li>
                         
@@ -233,7 +241,7 @@
                         <li id ="signup"><a href="#" class="sgbtn">Signup</a></li>
                     </ul>
                     <ul class="logoutbox">
-                        <li id ="logout"><a href="/web/Logout" class="sglogout">Logout</a></li>
+                        <li id ="logout"><a href="Logout" class="sglogout">Logout</a></li>
                         <li id ="label"><span id = "idspan"></span>&nbsp;&nbsp;님<hr>환영합니다</li>
                     </ul>
                 </nav1>
@@ -248,7 +256,7 @@
     <footer>
             <div class="mainbtmbox">
                 <div class="mainbtmimg">
-                    <a href = "model"><img src="/web/resources/img/TITLE_logo2_1420519158.png"></a>
+                    <a href = ""><img src="resources/img/TITLE_logo2_1420519158.png"></a>
                 </div>
                 <div class="mainbtmtxt">
                     <div class="btmtxt">상호 : 엑세코실업 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 대표자 : 한두원 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 사업장주소 : 경기도 고양시 일산동구 하늘마을로 158 대방트리플라온 B동 702호</div>

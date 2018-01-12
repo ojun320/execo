@@ -97,7 +97,7 @@
                  });
                
                function htmlLoad(){
-      		  		var url = "/web/" + hash.substr(1, hash.length)
+      		  		var url = hash.substr(1, hash.length)
       		  		$("section").load(url);
       		  	}
                
@@ -126,7 +126,7 @@
  			});
  			
  			function htmlLoad(){
- 		  		var url = "/web/" + hash.substr(1, hash.length)
+ 		  		var url = hash.substr(1, hash.length)
  		  		$("section").load(url);
  		  	}
 

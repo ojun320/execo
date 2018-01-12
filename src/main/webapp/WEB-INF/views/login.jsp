@@ -22,7 +22,7 @@
        	 	    });
        			
        			$("#logincns").off().on("click", function(){
-       				location.href ="model";
+       				location.href ="";
        	 	    });
        		});
        		
@@ -53,7 +53,7 @@
 			//$('#sjSignup').removeClass('m_col_disb').addClass('m_col_disn');
 			//$('#sjlogoutbtn').addClass('m_col_disb');
 			//$('#sjlabel').addClass('m_col_disb');
-			location.href ="model";
+			location.href ="";
 		}else{
 			alert("로그인 실패");
 			//location.replace("Logout"); // 로그인실패시 보낼 경로
@@ -69,7 +69,8 @@
     <body>
         <!--중간바디부분-->
         <div class="loginbody">
-            <div class="logincen">
+            <div class="logincen slide">
+               <div class="loginbar1"></div>
                 <div class="logintop">
                     <h1>Login</h1>
                 </div>

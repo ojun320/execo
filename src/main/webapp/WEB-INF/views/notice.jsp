@@ -12,20 +12,36 @@
         <link rel="stylesheet" href="resources/css/notice.css">
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	    <script  src="https://code.jquery.com/jquery-2.2.4.js"
-	    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-	    crossorigin="anonymous"></script>
+<!-- 	    <script src="https://code.jquery.com/jquery-2.2.4.js" -->
+<!-- 	    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" -->
+<!-- 	    crossorigin="anonymous"></script> -->
 	    <script type="text/javascript">
     	
 		var data = []; // 데이터 담을 배열 변수 선언
-    
-    $(document).ready(function(){
-    	var viewRow = 10; // 화면에 보여질 행 갯수
-    	var page = 1; // 현재 페이지 값
-    	var totCnt = 0; // 데이터 전체 객수
-    	var pageGroup = 1; // 현재 페이지 값
-    	var pageView = 5; // 페이징 버튼 객수
-    	
+		
+	    $(document).ready(function(){
+	    	var viewRow = 10; // 화면에 보여질 행 갯수
+	    	var page = 1; // 현재 페이지 값
+	    	var totCnt = 0; // 데이터 전체 객수
+	    	var pageGroup = 1; // 현재 페이지 값
+	    	var pageView = 5; // 페이징 버튼 객수
+	    	
+	    	$.ajax({
+	            url:"LoginCheck",
+	            data:data,
+	            datatype:"json",
+	            type:"post"
+	            }).done(function(result){         
+	            data = result.list;
+	            checkid = result.user.data.id;
+	            console.log(checkid);
+	            if(checkid == "admin"){
+	            	$(".writebtn").show();
+	            }else{
+	            	$(".writebtn").hide();
+	            }    
+	         });
+	    	
     	function createPaging(){
 			var paging = totCnt/viewRow; 
 			var end = (pageView * pageGroup); // 10 * 2 = 20 
@@ -85,7 +101,7 @@
 	
 			$.ajax({
 					type:"post", // post 방식으로 통신 요청
-					url:"/web/listData", // Spring에서 만든 URL 호출
+					url:"listData", // Spring에서 만든 URL 호출
 					dataType :"json",
 					data:{"start":start, "viewRow":viewRow} // 파라메터로 사용할 변수 값 객체 넣기
 			}).done(function(result){ // 비동기식 데이터 가져오기
@@ -105,7 +121,6 @@
 					html += '<td><a href="Detail?Qno=' + data[i].Qno + '">' + data[i].Qno + '</a></td>';
 					html += '<td><a href="Detail?Qno=' + data[i].Qno + '">' + data[i].id + '</a></td>'; 
 					html += '<td><a href="Detail?Qno=' + data[i].Qno + '">' + data[i].Qtitle + '</a></td>';
-					/* html += '<td><a href="Detail?class="title">';  */
 					html += '</td>';
 					html += '</tr>'; 
 					$("tbody").append(html);
@@ -118,7 +133,7 @@
 		            });
 		            
 		            function htmlLoad(){
-		                 var url = "/web/" + hash.substr(1, hash.length)
+		                 var url = hash.substr(1, hash.length)
 		                 $("section").load(url);
 		              }
 //------------------------------------------------------------------------------------------------------------------------------
@@ -130,6 +145,7 @@
 			   		    tag += "</tr>";
 			           	$("tbody").append(tag);
 			    } 
+			    
 		}
 		initData();	
 		
@@ -140,7 +156,10 @@
 	      $(".searchbtn").on("click", function(){
 	         var data = {"textsearch":$("#textsearch").val(), "contact_select":$("option").eq(Number($("#contact_selecttype").val())).text()}
 	         $.ajax({
-	            url:"MasterPage1Search", data:data, datatype:"json", type:"post"
+	            url:"MasterPage1Search",
+	            data:data,
+	            datatype:"json",
+	            type:"post"
 	            }).done(function(result){         
 	            data = result.list;
 	            init(result.list);       
@@ -155,8 +174,8 @@
 	    	 }
 	      
 	    	  	//그냥 검색만 누를시 리스트가 늘어나는거 수정
-	      });   
-    	
+	      });
+
 });
     </script>
         
@@ -165,7 +184,7 @@
         <!--중간미드부분-->
         <div class="noticebody">
             <div class="noticemenuimg">
-                <img src="/web/resources/img/noticemenuimg.JPG">
+                <img src="resources/img/noticemenuimg.JPG">
             </div>
             <div class="noticetxt">
                 <h1>공지사항</h1>

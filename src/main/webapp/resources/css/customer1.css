@@ -1,0 +1,106 @@
+.customerbody1 {
+    width: 1903px;
+    height: 760px;
+    background-color: #f0f0f0;
+}
+
+/*****************************************************************/
+
+.customermenuimg1{
+    width: 1903px;
+    height: 350px;
+    background-color: white;
+}
+
+.customermenuimg1 img {
+    margin-top: 4px;
+}
+
+/*****************************************************************/
+
+.customertxt1{
+    width: 1903px;
+    height: 75px;
+    background-color: #f0f0f0;
+}
+
+.customertxt1 h1 {
+    margin: 0px;
+    margin-left: 890px;
+    line-height: 70px;
+    font-size: 20px;
+}
+
+/*****************************************************************/
+
+.customerbox1 {
+    width: 960px;
+    height: 300px;
+    margin-left: 471.5px;
+    background-color: gainsboro;
+    border: 1px solid;
+}
+
+/*****************************************************************/
+
+.customerbox1-1{
+    width: 958px;
+    height: 100px;
+    background-color: gainsboro;
+    font-size: 14px;
+}
+
+.customerbox1-1 span {
+    margin-left: 50px;
+    line-height: 95px;
+}
+
+.customerbox1-1 a {
+    color: rgba(0, 0, 255, 0.74);
+}
+
+hr {
+    margin: 0px;
+}
+
+.customerbox1-2 {
+    width: 958px;
+    height: 70px;
+    background-color: gainsboro;
+}
+
+.customerbox1-2 span {
+    line-height: 100px;
+}
+
+.customerbox1-2 span h1{
+    margin: 0px;
+    font-size: 15px;
+    margin-left: 50px;
+}
+
+.customerbox1-3 {
+    width: 958px;
+    height: 130px;
+}
+
+.customerbox1-3 span {
+    margin-left: 50px;
+    line-height: 115px;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

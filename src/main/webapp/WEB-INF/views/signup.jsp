@@ -45,17 +45,12 @@
                         data: {"id" : id , "pw" : pw, "name" : name, "email" : email, "phone" : phone, "auth" : auth}
                      }).done(function(result){
                        alert("회원가입이 완료되었습니다. 로그인하세요.");
-                       location.href = "model";
-                       
+                       location.href = "";
                       });
-
         });
-       
-          
-        	
-        	
+
         	$("#btnP1").off().on("click", function(){
-        		location.replace("model");
+        		location.replace("");
         	});
         	
         	$("#checkid").off().on("click", function(){
@@ -103,7 +98,7 @@
         <!--중간미드부분-->
         <section>
             <div class="signupbody">
-                <div class="signupcen">
+                <div class="signupcen slide">
                     <div class="signuptop">
                         <h1>SignUp</h1>
                     </div>
@@ -114,8 +109,10 @@
                             </div>
                             <div class="signupmid1-x">
                                 <input type="text" class="signupinputbox" placeholder="아이디" id="id" name="id" maxLength="20">
-                       			<button type="button" class="loginButton" id="checkid">중복확인</button>
                             </div>
+                        </div>
+                        <div class="check_box">
+                            <button type="button" class="loginButton" id="checkid">아이디 중복확인</button>
                         </div>
                         <div class="signupmid1">
                             <div class="signupmid1-1">
@@ -147,14 +144,6 @@
                             </div>
                             <div class="signupmid1-2">
                                 <input type="text" class="signupinputbox" placeholder="휴대전화" id="phone" name="phone" maxLength="20">
-                            </div>
-                        </div>
-                        <div class="signupmid1">
-                            <div class="signupmid1-1">
-                                <h2>Auth</h2>
-                            </div>
-                            <div class="signupmid1-2">
-                                <input type="text" class="signupinputbox" placeholder="권한" id="auth" name="auth" maxLength="20">
                             </div>
                         </div>
                     </div>

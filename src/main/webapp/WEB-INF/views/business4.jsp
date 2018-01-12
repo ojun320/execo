@@ -18,14 +18,14 @@
 		<!--중간미드부분-->
         <div class="businessbody4">
             <div class="lsrmainimg4">
-                <img src="/web/resources/img/processingmainimg.JPG">
+                <img src="resources/img/processingmainimg.JPG">
             </div>
             <div class="lsrtext4">
                 <h1>액상수지공급시스템</h1>
             </div>
             <div class="lsrcontentsimg4">
                 <div class="processingtopimg">
-                    <img src="/web/resources/img/processingtopimg.jpg">
+                    <img src="resources/img/processingtopimg.jpg">
                 </div>
 <!--------------------------------------------------------------------->
                 <div class="businesscontents">
@@ -33,13 +33,13 @@
                         
                     </div>
                     <div class="businesscontentsbox2">
-                        <a href="http://www.reinhardt-technik.com/processes/bonding-sealing/"><img src="/web/resources/img/bondingimg.jpg"></a>
+                        <a href="http://www.reinhardt-technik.com/processes/bonding-sealing/"><img src="resources/img/bondingimg.jpg"></a>
                     </div>
                     <div class="businesscontentsbox3">
                         
                     </div>
                     <div class="businesscontentsbox4">
-                        <a href="http://www.reinhardt-technik.com/processes/casting-encapsulation/"><img src="/web/resources/img/castingimg.png"></a>
+                        <a href="http://www.reinhardt-technik.com/processes/casting-encapsulation/"><img src="resources/img/castingimg.png"></a>
                     </div>
                     <div class="businesscontentsbox5">
                         
@@ -52,20 +52,20 @@
                         
                     </div>
                     <div class="businesscontentsbox2">
-                        <a href="http://www.reinhardt-technik.com/processes/surface-technologies/"><img src="/web/resources/img/surfaceimg.png"></a>
+                        <a href="http://www.reinhardt-technik.com/processes/surface-technologies/"><img src="resources/img/surfaceimg.png"></a>
                     </div>
                     <div class="businesscontentsbox3">
                         
                     </div>
                     <div class="businesscontentsbox4">
-                        <a href="http://www.reinhardt-technik.com/markets/glazing/"><img src="/web/resources/img/surfaceimg1.png"></a>
+                        <a href="http://www.reinhardt-technik.com/markets/glazing/"><img src="resources/img/surfaceimg1.png"></a>
                     </div>
                     <div class="businesscontentsbox5">
                         
                     </div>
 <!--------------------------------------------------------------------->
                     <div class="businesscontentsbox7">
-                        <img src="/web/resources/img/processingbar2img.jpg">
+                        <img src="resources/img/processingbar2img.jpg">
                     </div>
 <!--------------------------------------------------------------------->
                     <div class="businesscontentsbox8">
@@ -73,31 +73,31 @@
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg1.jpg"></a>
+                            <a><img src="resources/img/processingproductimg1.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg2.jpg"></a>
+                            <a><img src="resources/img/processingproductimg2.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg3.jpg"></a>
+                            <a><img src="resources/img/processingproductimg3.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg4.jpg"></a>
+                            <a><img src="resources/img/processingproductimg4.jpg"></a>
                         </div>
                         <div class="contentsbox1">
                             
                         </div>
                         <div class="businesscontentsbox7">
-                        <img src="/web/resources/img/processingproductbar2.jpg">
+                        <img src="resources/img/processingproductbar2.jpg">
                         </div>
                     </div>
 <!--------------------------------------------------------------------->
@@ -106,31 +106,31 @@
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg5.jpg"></a>
+                            <a><img src="resources/img/processingproductimg5.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg6.jpg"></a>
+                            <a><img src="resources/img/processingproductimg6.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg7.jpg"></a>
+                            <a><img src="resources/img/processingproductimg7.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg8.jpg"></a>
+                            <a><img src="resources/img/processingproductimg8.jpg"></a>
                         </div>
                         <div class="contentsbox1">
                             
                         </div>
                         <div class="businesscontentsbox7">
-                        <img src="/web/resources/img/processingproductbar3.jpg">
+                        <img src="resources/img/processingproductbar3.jpg">
                         </div>
                     </div>
 <!--------------------------------------------------------------------->
@@ -139,19 +139,19 @@
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg9.jpg"></a>
+                            <a><img src="resources/img/processingproductimg9.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg10.jpg"></a>
+                            <a><img src="resources/img/processingproductimg10.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg11.jpg"></a>
+                            <a><img src="resources/img/processingproductimg11.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
@@ -163,7 +163,7 @@
                             
                         </div>
                         <div class="businesscontentsbox7">
-                        <img src="/web/resources/img/processingproductbar4.jpg">
+                        <img src="resources/img/processingproductbar4.jpg">
                         </div>
                     </div>
 <!--------------------------------------------------------------------->
@@ -172,31 +172,31 @@
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg12.jpg"></a>
+                            <a><img src="resources/img/processingproductimg12.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg13.jpg"></a>
+                            <a><img src="resources/img/processingproductimg13.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg14.jpg"></a>
+                            <a><img src="resources/img/processingproductimg14.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg15.jpg"></a>
+                            <a><img src="resources/img/processingproductimg15.jpg"></a>
                         </div>
                         <div class="contentsbox1">
                             
                         </div>
                         <div class="businesscontentsbox7">
-                        <img src="/web/resources/img/processingproductbar5.jpg">
+                        <img src="resources/img/processingproductbar5.jpg">
                         </div>
                     </div>
 <!--------------------------------------------------------------------->
@@ -205,19 +205,19 @@
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg16.jpg"></a>
+                            <a><img src="resources/img/processingproductimg16.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg17.jpg"></a>
+                            <a><img src="resources/img/processingproductimg17.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg18.jpg"></a>
+                            <a><img src="resources/img/processingproductimg18.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
@@ -229,7 +229,7 @@
                             
                         </div>
                         <div class="businesscontentsbox7">
-                        <img src="/web/resources/img/processingproductbar6.jpg">
+                        <img src="resources/img/processingproductbar6.jpg">
                         </div>
                     </div>
 <!--------------------------------------------------------------------->
@@ -238,7 +238,7 @@
                             
                         </div>
                         <div class="contentsbox">
-                            <a><img src="/web/resources/img/processingproductimg19.jpg"></a>
+                            <a><img src="resources/img/processingproductimg19.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             

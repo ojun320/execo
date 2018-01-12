@@ -18,13 +18,13 @@
 	 <!--중간미드부분-->
         <div class="introducebody2">
             <div class="introduceimg">
-                <img src="/web/resources/img/introduce1.JPG">
+                <img src="resources/img/introduce1.JPG">
             </div>
             <div class="introduce1">
                 <h1>회사연혁</h1>
             </div>
             <div class="introduce2">
-                <img src="/web/resources/img/indroduce3.jpg">
+                <img src="resources/img/indroduce3.jpg">
             </div>
             <div class="introduce3">
 

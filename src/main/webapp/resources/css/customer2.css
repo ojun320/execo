@@ -1,0 +1,85 @@
+.customerbody2 {
+    width: 1903px;
+    height: 1960px;
+    background-color: #f0f0f0;
+}
+
+/*****************************************************************/
+
+.customermenuimg2{
+    width: 1903px;
+    height: 350px;
+    background-color: white;
+}
+
+.customermenuimg2 img {
+    margin-top: 4px;
+}
+
+/*****************************************************************/
+
+.customertxt2{
+    width: 1903px;
+    height: 75px;
+    background-color: #f0f0f0;
+}
+
+.customertxt2 h1 {
+    margin: 0px;
+    margin-left: 890px;
+    line-height: 70px;
+    font-size: 20px;
+}
+
+/*****************************************************************/
+
+.customerbox2 {
+    width: 960px;
+    height: 1442px;
+    margin-left: 471.5px;
+    background-color: gainsboro;
+    border: 1px solid;
+}
+
+/*****************************************************************/
+
+.customerbox2-1 {
+    width: 958px;
+    height: 240px;
+    background-color: beige;
+    float: left;
+}
+
+.customerbox2-1-1 {
+    width: 191.6px;
+    height: 240px;
+    float: left;
+    background-color: white;
+}
+
+.customerbox2-1-1-1 {
+    width: 191.6px;
+    height: 200px;
+    float: left;
+}
+
+.customerbox2-1-1-1 img {
+    margin-left: 19px;
+    margin-top: 10px;
+    width: 90%;
+    height: 90%;
+}
+
+.customerbox2-1-1-2 {
+    width: 191.6px;
+    height: 40px;
+    float: left;
+}
+
+.customerbox2-1-1-2 h4 {
+    margin: 0px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+

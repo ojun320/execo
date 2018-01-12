@@ -14,6 +14,30 @@
     <script type="text/javascript">
 
         $(document).ready(function(){
+        	var xOffset = 10;
+            var yOffset = 30;
+
+            $(document).on("mouseover",".thumbnail",function(e){ //마우스 오버시
+                 
+                $("body").append("<p id='preview'><img src='"+ $(this).attr("src") +"' width='600px' /></p>"); //보여줄 이미지를 선언                       
+                $("#preview")
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px")
+                    .fadeIn("fast"); //미리보기 화면 설정 셋팅
+            });
+             
+            $(document).on("mousemove",".thumbnail",function(e){ //마우스 이동시
+                $("#preview")
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px");
+            });
+             
+            $(document).on("mouseout",".thumbnail",function(){ //마우스 아웃시
+                $("#preview").remove();
+            });
+        	
+        	
+        
         	var dt = [];
             var newsNo = <%=newsNo%>;
             
@@ -30,7 +54,7 @@
              });
             
 			function htmlLoad(){
-		  		var url = "/web/" + hash.substr(1, hash.length)
+		  		var url = hash.substr(1, hash.length)
 		  		$("section").load(url);	
 		  	}
 			
@@ -125,11 +149,16 @@
 				hash= "#customer";
 		  		htmlLoad();
 		  	});
+			// 고객지원2 클릭했을시 hash전환
+			$("#customer1").off().on("click", function(){
+				hash= "#customer1";
+		  		htmlLoad();
+		  	});
 	/**************************************************************/			
-
-			// 취소버튼 눌렀을때 model로 돌아가기
+			// 취소버튼 눌렀을때 돌아가기
 			$(".qpsyQbtn2").off().on("click", function(){
-				location.replace("model");
+				hash= "#customer";
+		  		htmlLoad();
 			});
 
 			function listHtml(){
@@ -145,7 +174,7 @@
 	              $("#c_title span").html(contents);
 	             
 	             tag = '<div class="listimgbox-1">'+
-					'<img src="/web/'+dt.picPath+dt.picName+ '">'+
+					'<img src="'+dt.picPath+dt.picName+ '" class="thumbnail">'+
 				'</div>'
 				$(".showimg").append(tag);
 			}
@@ -184,7 +213,18 @@
 			htmlLoad();
 		});
     </script>
-
+    <style>
+            /* 미리보기 스타일 셋팅 */
+            #preview{
+                z-index: 9999;
+                position:absolute;
+                border:0px solid #ccc;
+                background:#333;
+                padding:1px;
+                display:none;
+                color:#fff;
+            }
+        </style>
 </head>
 	<body>
 	
@@ -192,7 +232,7 @@
 	    <header>
             <div class="maintopbox">
                 <div class="maintopimg">
-                	<a href = "model"><img src="/web/resources/img/TITLE_LOGO_1420616575.png"></a>
+                	<a href = "/"><img src="resources/img/TITLE_LOGO_1420616575.png"></a>
                 </div>
                 <nav>
                     <ul>
@@ -231,13 +271,10 @@
                                 <li><a href="#">채용정보</a></li>
                             </ul>
                         </li>
-                        <li id="customer"><a href="#" class="customer">고객지원</a>
                             <ul>
-                                <li><a href="#">카탈로그</a></li>
-                                <li id="customer"><a href="#" class="customer">new&events</a></li>
-                                <li><a href="#">질문과 답변</a></li>
-                                <li><a href="#">사진</a></li>
-                                <li><a href="#">견적문의</a></li>
+                                <li id="customer2"><a href="#" class="customer2">카탈로그</a></li>
+                                <li id="customer"><a href="#" class="customer">자료실</a></li>
+                                <li id="customer1"><a href="#" class="customer1">견적문의</a></li>
                             </ul>
                         </li>
                         
@@ -250,7 +287,7 @@
                         <li id ="signup"><a href="#" class="sgbtn">Signup</a></li>
                     </ul>
                     <ul class="logoutbox">
-                        <li id ="logout"><a href="/web/Logout" class="sglogout">Logout</a></li>
+                        <li id ="logout"><a href="Logout" class="sglogout">Logout</a></li>
                         <li id ="label"><span id = "idspan"></span>&nbsp;&nbsp;님<hr>환영합니다</li>
                     </ul>
                 </nav1>
@@ -295,7 +332,7 @@
     	<footer>
             <div class="mainbtmbox">
                 <div class="mainbtmimg">
-                    <a href = "model"><img src="/web/resources/img/TITLE_logo2_1420519158.png"></a>
+                    <a href = ""><img src="resources/img/TITLE_logo2_1420519158.png"></a>
                 </div>
                 <div class="mainbtmtxt">
                     <div class="btmtxt">상호 : 엑세코실업 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 대표자 : 한두원 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 사업장주소 : 경기도 고양시 일산동구 하늘마을로 158 대방트리플라온 B동 702호</div>

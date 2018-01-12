@@ -26,14 +26,14 @@ hr {
 }
 .qpsydatailTop1 {
     margin: 0px;
-	background-color: #f0f0f0;
+	background-color: gainsboro;
 	height: 100px;
 }
 
 .qpsydatailTop1 span {
     font-size: 30px;
     line-height: 100px;
-    margin-left: 350px;
+    margin-left: 360px;
 }
 
 .qpsydatailMiddel {
@@ -76,7 +76,7 @@ hr {
     width: 740px;
     margin-left: 100px;
     background-color: #f0f0f0;
-    height: 290px;
+    height: 400px;
 }
 
 .qxbox {
@@ -128,4 +128,6 @@ hr {
 
 /*****************************************************************/
 
-
+listimgbox-1 img{
+	cursor: pointer;
+}

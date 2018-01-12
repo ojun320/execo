@@ -64,7 +64,7 @@ public class SignupController {
 	@RequestMapping("/Logout")
 	public ModelAndView logout(ModelAndView mav, HttpSession session){
 		session.invalidate();
-		mav.setViewName("redirect:/model");
+		mav.setViewName("redirect:/");
 		return mav;
 	}
 	   // 로그인유지

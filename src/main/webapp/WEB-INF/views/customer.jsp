@@ -21,7 +21,7 @@
 	            });
 	            
 	            function htmlLoad(){
-	                 var url = "/web/" + hash.substr(1, hash.length)
+	                 var url = hash.substr(1, hash.length)
 	                 $("section").load(url);
 	              }
 //------------------------------------------------------------------------------------------------------------------------------
@@ -33,13 +33,29 @@
 		   var totCnt = 0;
 		   var user = {};
 		   
-		
+			
+		   $.ajax({
+	            url:"LoginCheck",
+	            data:data,
+	            datatype:"json",
+	            type:"post"
+	            }).done(function(result){         
+	            data = result.list;
+	            checkid = result.user.data.id;
+	            console.log(checkid);
+	            if(checkid == "admin"){
+	            	$(".loginButton1").show();
+	            }else{
+	            	$(".loginButton1").hide();
+	            }    
+	         });
+		   
 		   function createHtml(){ // ul(부모) 태그 속에 li(자식) 태그 넣기 위한 함수
 		      
 		      $(".form").empty(); // ul 태그의 자식들를 초기화가 필요하다.
 		      for(var i = 0; i<data.length; i++){
 		         tag =  '<div class="listimgbox">'+
-						      	'<img src="/web/'+data[i].picPath+data[i].picName+ '">'+
+						      	'<img src="'+data[i].picPath+data[i].picName+ '">'+
 						      '</div>'+
 						      '<div class="listtextbox">'+
 						      	'<hr>'+
@@ -142,10 +158,10 @@
         <!--중간미드부분-->
         <div class="customerbody">
             <div class="customermenuimg">
-                <img src="/web/resources/img/customermenuimg.JPG">
+                <img src="resources/img/customermenuimg.JPG">
             </div>
             <div class="customertxt">
-                <h1>new & events</h1>
+                <h1>자료실</h1>
             </div>
             
             

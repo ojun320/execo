@@ -23,14 +23,14 @@
 		<!--중간미드부분-->
         <div class="introducelsr2body">
             <div class="introducelsr2menuimg">
-                <img src="/web/resources/img/introdekumamenu.JPG">
+                <img src="resources/img/introdekumamenu.JPG">
             </div>
             <div class="introducelsr2txt">
                 <h1>대형금형</h1>
             </div>
             <div class="introducelsr2box">
                 <div class="introdekumamenu1">
-                    <img src="/web/resources/img/introdekumamenu1.jpg">
+                    <img src="resources/img/introdekumamenu1.jpg">
                 </div>
             </div>
         </div>

@@ -5,8 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type ="text/javascript">
-alert("login 후 이용 가능합니다.");
-location.replace("model"); 
+
+	alert("login 후 이용 가능합니다.");
+ 	location.replace("/"); 
+	
 </script>
 </head>
 </html>

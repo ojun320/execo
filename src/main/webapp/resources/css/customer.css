@@ -26,7 +26,7 @@
 
 .customertxt h1 {
     margin: 0px;
-    margin-left: 850px;
+    margin-left: 890px;
     line-height: 70px;
     font-size: 20px;
 }
@@ -36,14 +36,17 @@
 .customerbox {
     width: 960px;
     height: 1261px;
+    border: 1px solid;
     margin-left: 471.5px;
     background-color: #f0f0f0;
 }
 
 .bod-count {
-	width: 960px;
+	width: 945px;
 	height: 50px;
 	background-color: #f0f0f0;
+	line-height: 50px;
+	margin-left: 13px;
 }
 
 .listbigbox {
@@ -59,27 +62,29 @@
     height: 193.5px;
     float: left;
     cursor: pointer;
-    background-color: beige;
+    background-color: gainsboro;
 }
 
 .listimgbox img {
-	width: 100%;
-    height: 100%;
+	width: 90%;
+    height: 90%;
     float: left;
+    margin-left: 13px;
+    margin-top: 9px;
 }
 
 .listtextbox {
-    width: 700px;
+    width: 698px;
     height: 193.5px;
     float: left;
-    background-color: burlywood;
+    background-color: gainsboro;
 }
 
 .text-form0 {
-    width: 700px;
+    width: 698px;
     height: 43.5px;
     float: left;
-    background-color: aquamarine;
+    background-color: gainsboro;
 }
 
 .label2 {
@@ -103,7 +108,7 @@
 }
 
 .listday {
-    width: 110px;
+    width: 108px;
     height: 43.5px;
     float: left;
     line-height: 40px;
@@ -111,7 +116,7 @@
 }
 
 .text-form {
-    width: 700px;
+    width: 698px;
     height: 146px;
     float: left;
     background-color: gainsboro;
@@ -123,7 +128,7 @@
 }
 
 .form {
-	width: 960px;
+	width: 958px;
 	height: 1161px;
 	float: left;
 	background-color: #f0f0f0;
@@ -134,8 +139,8 @@ hr {
     margin: 0px;
 }
 .page {
-	width: 960px;
-	height: 50px;
+	width: 958px;
+	height: 48px;
 	float: left;
 	text-align: center;
 	background-color: #f0f0f0;

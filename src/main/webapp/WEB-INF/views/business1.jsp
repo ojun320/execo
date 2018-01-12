@@ -18,13 +18,13 @@
 		<!--중간미드부분-->
         <div class="businessbody1">
             <div class="lsrmainimg1">
-                <img src="/web/resources/img/lsrmainimg.JPG">
+                <img src="resources/img/lsrmainimg.JPG">
             </div>
             <div class="lsrtext1">
                 <h1>액상실리콘사출성형</h1>
             </div>
             <div class="lsrcontentsimg1">
-                <img src="/web/resources/img/lsrcontentsimg.jpg">
+                <img src="resources/img/lsrcontentsimg.jpg">
             </div>
             <div class="lsrfooterbar1">
                 

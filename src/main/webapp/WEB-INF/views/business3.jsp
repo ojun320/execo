@@ -18,13 +18,13 @@
 		<!--중간미드부분-->
         <div class="businessbody3">
             <div class="lsrmainimg3">
-                <img src="/web/resources/img/solutionmainimg.JPG">
+                <img src="resources/img/solutionmainimg.JPG">
             </div>
             <div class="lsrtext3">
                 <h1>품질관리솔루션</h1>
             </div>
             <div class="lsrcontentsimg3">
-                <img src="/web/resources/img/solutioncontentsimg.jpg">
+                <img src="resources/img/solutioncontentsimg.jpg">
             </div>
             <div class="lsrfooterbar3">
                 

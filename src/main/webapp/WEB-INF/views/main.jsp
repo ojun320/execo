@@ -31,7 +31,7 @@
         	var hash = location.hash;
         	var tag = "";
         	function htmlLoad(){
-        		var url = "/web/" + hash.substr(1, hash.length);
+        		var url = hash.substr(1, hash.length);
        		 	$("section").load(url);
         	}
         	// 제품소개1 클릭했을시 hash전환
@@ -109,7 +109,7 @@
     	
     			$.ajax({
     					type:"post", // post 방식으로 통신 요청
-    					url:"/web/listData", // Spring에서 만든 URL 호출
+    					url:"listData", // Spring에서 만든 URL 호출
     					dataType :"json",
     					data:{"start":start, "viewRow":viewRow} // 파라메터로 사용할 변수 값 객체 넣기
     			}).done(function(result){ // 비동기식 데이터 가져오기
@@ -145,7 +145,7 @@
   		      $(".form").empty();
   		      for(var i = 0; i<data.length; i++){
   		         tag = '<div class="listimgbox1">'+
-  							'<img src="/web/'+data[i].picPath+data[i].picName+ '">'+
+  							'<img src="'+data[i].picPath+data[i].picName+ '">'+
   						'</div>'
   				$(".form").append(tag);
   		    }
@@ -200,19 +200,19 @@
         <!--중간미드부분1--> 
         <div class="slideshow-container">
             <div class="mySlides fade">
-              <img src="/web/resources/img/main1.JPG" style="width:1903px">
+              <img src="resources/img/main1.JPG" style="width:1903px">
             </div>
 
             <div class="mySlides fade">
-              <img src="/web/resources/img/main2.JPG" style="width:1903px">
+              <img src="resources/img/main2.JPG" style="width:1903px">
             </div>
 
             <div class="mySlides fade">
-              <img src="/web/resources/img/main3.JPG" style="width:1903px">
+              <img src="resources/img/main3.JPG" style="width:1903px">
             </div>
         </div>
 
-        <div style="text-align:center">
+        <div style="text-align:center;display:none;">
           <span class="dot" onclick="currentSlide(0)"></span> 
           <span class="dot" onclick="currentSlide(1)"></span> 
           <span class="dot" onclick="currentSlide(2)"></span> 
@@ -267,7 +267,7 @@
                     <div class="clear-midbox1"></div>
                     <div class="midbox1-2">
                         <div class="midboxtop-1">
-                            <p>영상</p>
+                            <p>회사소개 영상</p>
                         </div>
                         <div class="videobox">
                             <iframe width="318" height="180" src="//player.vimeo.com/video/116044275" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
@@ -279,7 +279,7 @@
                             <p>고객센터</p>
                         </div>
                         <div class="customimg">
-                            <img src="/web/resources/img/customcenterimg.JPG">
+                            <img src="resources/img/customcenterimg.JPG">
                         </div>
                     </div>
                     <div class="clear-midbox1"></div>
@@ -294,19 +294,19 @@
                             <p>제품소개</p>
                         </div>
                         <div class="midboxmid1">
-                            <a href="#"><img src="/web/resources/img/mainlsrimg.JPG"></a>
+                            <a href="#"><img src="resources/img/mainlsrimg.JPG"></a>
                         </div>
                         <div class="midboxmid2">
-                            <a href="#"><img src="/web/resources/img/mainsensorsimg.JPG"></a>
+                            <a href="#"><img src="resources/img/mainsensorsimg.JPG"></a>
                         </div>
                         <div class="midboxmid3">
-                            <a href="#"><img src="/web/resources/img/mainsolutionimg.JPG"></a>
+                            <a href="#"><img src="resources/img/mainsolutionimg.JPG"></a>
                         </div>
                     </div>
                     <div class="clear-midbox2"></div>
                     <div class="midbox3-2">
                         <div class="midboxtop-2">
-                            <p>NEW & EVENTS</p>
+                            <p>자료실</p>
                         </div>
                         <div class="eventsbox">
                         	<div class="form">

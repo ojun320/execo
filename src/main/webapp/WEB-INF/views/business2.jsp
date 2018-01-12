@@ -18,13 +18,13 @@
 		<!--중간미드부분-->
         <div class="businessbody2">
             <div class="lsrmainimg2">
-                <img src="/web/resources/img/strainmainimg.JPG">
+                <img src="resources/img/strainmainimg.JPG">
             </div>
             <div class="lsrtext2">
                 <h1>특수센서</h1>
             </div>
             <div class="lsrcontentsimg2">
-                <img src="/web/resources/img/straincontentsimg.jpg">
+                <img src="resources/img/straincontentsimg.jpg">
             </div>
             <div class="lsrfooterbar2">
                 

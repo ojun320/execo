@@ -1,23 +1,24 @@
 .signupbody{
     width: 1903px;
-    height: 1250px;
+    height: 1050px;
     background-color: #f0f0f0;
+    background-image: url("http://gudi.iptime.org:1120/resources/img/loginbackimg.jpg");
 }
 
 /*****************************************************************/
 
 .signupcen{
-    width: 800px;
-    height: 760px;
-    background-color: gray;
-    margin-left: 551.5px;
+    width: 400px;
+    height: 1050px;
+    margin-left: 1503px;
+    background-color: #f0f0f0; filter:alpha(opacity=10); opacity:0.9; -moz-opacity:0.1;
 }
 
 /*****************************************************************/
 
 .signuptop{
-    width: 800px;
-    height: 350px;
+    width: 400px;
+    height: 300px;
     background-color: #f0f0f0;
 }
 
@@ -25,57 +26,61 @@ h1{
     margin: 0px;
     line-height: 300px;
     text-align: center;
-    font-size: 80px;
+    font-size: 50px;
 }
 /*****************************************************************/
 
 .signupmid{
-    width: 800px;
-    height: 600px;
+    width: 400px;
+    height: 500px;
     background-color: #f0f0f0;
 }
 
 .signupmid1{
-    margin-left: 120px;
-    width: 1000px;
-    height: 100px;
+    width: 400px;
+    height: 70px;
 }
 
 .signupmid1-1{
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 70px;
     float: left;
     text-align: center;
     background-color: #f0f0f0;
 }
 
 .signupmid1-2{
-    width: 600px;
+    width: 250px;
     height: 100px;
     float: left;
     background-color: #f0f0f0;
 }
 
 .signupmid1-x{
-    width: 700px;
-    height: 100px;
+    width: 250px;
+    height: 70px;
     background-color: #f0f0f0;
     float: left;
 }
 
 
 .signupinputbox{
-    width: 300px;
+    width: 200px;
     height: 30px;
     margin-top: 23px;
     float: left;
 }
 
+.check_box {
+    width: 400px;
+    height: 80px;
+}
+
 /*****************************************************************/
 
 .signupbtm{
-    width: 800px;
-    height: 300px;
+    width: 400px;
+    height: 200px;
     background-color: #f0f0f0; 
 }
 
@@ -83,9 +88,9 @@ h1{
 
 .loginButton {
     margin-top: 16px;
-    margin-left: 30px;
+    margin-left: 158px;
     height: 42px;
-    width: 130px;
+    width: 180px;
     font: inherit; 
     padding: 2px 4px; 
     background-color: #eaeaea; 
@@ -106,7 +111,7 @@ h1{
 
 .loginButton1 {
     margin-top: 80px;
-    margin-left: 240px;
+    margin-left: 45px;
     height: 42px;
     width: 130px;
     font: inherit; 
@@ -152,3 +157,32 @@ h1{
 
 
 /*****************************************************************/
+
+
+.slidenim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 3.5s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateX(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0%);
+    }

@@ -23,26 +23,26 @@
 		<!--중간미드부분-->
         <div class="introducelsr1body">
             <div class="introducelsr1menuimg">
-                <img src="/web/resources/img/ricointromenu.JPG">
+                <img src="resources/img/ricointromenu.JPG">
             </div>
             <div class="introducelsr1txt">
                 <h1>정밀금형</h1>
             </div>
             <div class="introducelsr1box">
                 <div class="lsrlicobar">
-                    <img src="/web/resources/img/lsrlicobar.jpg">
+                    <img src="resources/img/lsrlicobar.jpg">
                 </div>
                 <div class="lsrlicobar1">
-                    <img src="/web/resources/img/lsrlicobar1.jpg">
+                    <img src="resources/img/lsrlicobar1.jpg">
                 </div>
                 <div class="lsrlicobar2">
                     <iframe width="400" height="220" src="//player.vimeo.com/video/118457006" frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen=""></iframe>
                 </div>
                 <div class="lsrlicobar1">
-                    <img src="/web/resources/img/lsrlicobar1.jpg">
+                    <img src="resources/img/lsrlicobar1.jpg">
                 </div>
                 <div class="lsrlicobar3">
-                    <img src="/web/resources/img/lsrlicobar2.jpg">
+                    <img src="resources/img/lsrlicobar2.jpg">
                 </div>
             </div>
         </div>
