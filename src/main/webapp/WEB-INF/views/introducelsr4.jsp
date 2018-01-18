@@ -31,13 +31,13 @@
                     <img src="resources/img/cavitybarimg1.png">
                 </div>
                 <div class="cavityimg2-2">
-                    <img src="resources/img/cavityproduct1.jpg">
+                    <a href="resources/pdf/BBSFILEevent3.pdf" target="_blank"><img src="resources/img/cavityproduct1.jpg"></a>
                 </div>
                 <div class="cavityimg2-3">
                     <img src="resources/img/cavitybarimg2.png">
                 </div>
                 <div class="cavityimg2-4">
-                    <img src="resources/img/cavityproduct2.jpg">
+                    <a href="resources/pdf/BBSFILEevent2.pdf" target="_blank"><img src="resources/img/cavityproduct2.jpg"></a>
                 </div>
                 <div class="cavityimg2-5">
                     <img src="resources/img/cavitybarimg3.png">
@@ -49,25 +49,25 @@
                     <img src="resources/img/cavitybarimg1.png">
                 </div>
                 <div class="cavityimg3-2">
-                    <img src="resources/img/cavityproduct3.jpg">
+                    <a href="resources/pdf/BBSFILEevent5.pdf" target="_blank"><img src="resources/img/cavityproduct3.jpg"></a>
                 </div>
                 <div class="cavityimg3-3">
                     <img src="resources/img/cavitybarimg2.png">
                 </div>
                 <div class="cavityimg3-4">
-                    <img src="resources/img/cavityproduct4.jpg">
+                    <a href="resources/pdf/BBSFILEevent4.pdf" target="_blank"><img src="resources/img/cavityproduct4.jpg"></a>
                 </div>
                 <div class="cavityimg3-5">
                     <img src="resources/img/cavitybarimg2.png">
                 </div>
                 <div class="cavityimg3-6">
-                    <img src="resources/img/cavityproduct5.jpg">
+                    <a href="resources/pdf/BBSFILEevent1.pdf" target="_blank"><img src="resources/img/cavityproduct5.jpg"></a>
                 </div>
                 <div class="cavityimg3-7">
                     <img src="resources/img/cavitybarimg2.png">
                 </div>
                 <div class="cavityimg3-8">
-                    <img src="resources/img/cavityproduct6.jpg">
+                    <a href="resources/pdf/BBSFILEevent0.pdf" target="_blank"><img src="resources/img/cavityproduct6.jpg"></a>
                 </div>
                 <div class="cavityimg3-9">
                     <img src="resources/img/cavitybarimg5.png">
@@ -91,19 +91,19 @@
                     <img src="resources/img/cavitybarimg8.png">
                 </div>
                 <div class="cavityimg5-2">
-                    <img src="resources/img/cavityproduct8.jpg">
+                    <a href="resources/pdf/BBSFILEevent7.pdf" target="_blank"><img src="resources/img/cavityproduct8.jpg"></a>
                 </div>
                 <div class="cavityimg5-3">
                     <img src="resources/img/cavitybarimg9.png">
                 </div>
                 <div class="cavityimg5-4">
-                    <img src="resources/img/cavityproduct9.jpg">
+                    <a href="resources/pdf/BBSFILEevent7.pdf" target="_blank"><img src="resources/img/cavityproduct9.jpg"></a>
                 </div>
                 <div class="cavityimg5-5">
                     <img src="resources/img/cavitybarimg10.png">
                 </div>
                 <div class="cavityimg5-6">
-                    <img src="resources/img/cavityproduct10.jpg">
+                    <a href="resources/pdf/BBSFILEevent6.pdf" target="_blank"><img src="resources/img/cavityproduct10.jpg"></a>
                 </div>
                 <div class="cavityimg5-7">
                     <img src="resources/img/cavitybarimg10.png">

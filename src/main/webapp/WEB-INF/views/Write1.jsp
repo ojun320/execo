@@ -138,7 +138,7 @@
 
 <body>
 <div id="content">
-		<div class="qmidbox">
+	<div class="qmidbox">
 		<div class="qemptybox"></div>
             <div class="mainbox">
                    <div class="title">
@@ -157,12 +157,12 @@
                             <textarea name="content" id="content2"></textarea>
                         </div>
                         <div class="upload">
-                            <div>
+                            <div class="addfile">
                                <label for="fileName">첨부 파일 :</label>
-                               <input type="file" name="file" id="file" value="파일"  >
+                               <input type="file" name="file" id="file" value="파일">
                                <span id="fileName"></span>
                             </div>
-                            <div>
+                            <div class="addimg">
                                <label for="img">이미지 :</label>
                                <input type="file" name="img" id="img" value="이미지"  accept="image/*">
                                <span id="imgName"></span>
@@ -175,7 +175,7 @@
                      </form>
                    </div>
                 </div>
-		</div>
+			</div>
 		</div>
 </body>
 

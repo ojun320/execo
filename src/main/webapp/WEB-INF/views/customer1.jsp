@@ -11,6 +11,7 @@
         <link rel ="stylesheet" href ="resources/css/main.css">
         <link rel="stylesheet" href="resources/css/customer1.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
         <script type="text/javascript">
 			$(document).ready(function(){
 	
@@ -36,7 +37,7 @@
 		                </div>
 		                <hr>
 		                <div class="customerbox1-3">
-		                    <span>궁금하신점이나 상담을 원하신다면 엑셀 첨부파일을 다운받으시고 작성하신 후 메일로 보내주시면 답변드리겠습니다.</span>
+		                    <span>궁금하신점이 있으시거나 상담을 원하신다면 엑셀 첨부파일을 다운받으시고 작성하신 후 메일로 보내주시면 답변드리겠습니다.</span>
 		                </div>
 		            </div>
 		        </div>

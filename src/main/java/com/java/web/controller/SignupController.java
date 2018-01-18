@@ -15,9 +15,11 @@ import org.springframework.web.servlet.ModelAndView;
 import com.java.web.service.SignupServiceInterface;
 import com.java.web.util.HttpUtil;
 
-
 @Controller
 public class SignupController {
+	
+	@Autowired
+	SignupServiceInterface ssi;
 	
 	@RequestMapping("/signup") // 회원가입페이지
 	public ModelAndView signup(ModelAndView mav){
@@ -30,10 +32,7 @@ public class SignupController {
 		mav.setViewName("login");
 	return mav;
 	}
-	
-	@Autowired
-	SignupServiceInterface ssi;
-	
+
 	// 회원가입
 	@RequestMapping(value="/SignupData", method = RequestMethod.POST)
 	public ModelAndView signupData(ModelAndView mav, HttpServletRequest req){ 
@@ -57,7 +56,6 @@ public class SignupController {
 		HashMap<String, Object> result = ssi.getLoginData(param);	   
 		session.setAttribute("user", result);	   
 		HttpUtil.sendResponceToJson(resp, result);
-	// mav.addObject(result);
 	}
 	
 	// 로그아웃
@@ -67,17 +65,18 @@ public class SignupController {
 		mav.setViewName("redirect:/");
 		return mav;
 	}
-	   // 로그인유지
-	   @RequestMapping(value="/LoginCheck", method = RequestMethod.POST)
-	   public void LoginCheck(HttpServletResponse resp, HttpSession session){
-	      HashMap<String, Object> user = (HashMap<String, Object>) session.getAttribute("user");
-	      HashMap<String, Object> map = new HashMap<String, Object>();
-	      if(user == null){
-	         map.put("status", 0);
-	      }else{
-	         map.put("status", 1);
-	         map.put("user", user);
-	      }
-	      HttpUtil.sendResponceToJson(resp, map);
-	   }
-}
+	
+	// 로그인유지
+	@RequestMapping(value="/LoginCheck", method = RequestMethod.POST)
+	public void LoginCheck(HttpServletResponse resp, HttpSession session){
+		HashMap<String, Object> user = (HashMap<String, Object>) session.getAttribute("user");
+		HashMap<String, Object> map = new HashMap<String, Object>();
+			if(user == null){
+				map.put("status", 0);
+			}else{
+				map.put("status", 1);
+				map.put("user", user);
+			}
+			HttpUtil.sendResponceToJson(resp, map);
+		}
+	}

@@ -2,17 +2,25 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel ="stylesheet" href ="resources/css/main.css">
-    <link rel="stylesheet" href="resources/css/customer2.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
-	<script type ="text/javascript">
-	$(document).ready(function(){ 
+	<title>
+       	엑세코실업 [EXECO]
+    </title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel ="stylesheet" href ="resources/css/main.css">
+	    <link rel="stylesheet" href="resources/css/customer2.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
-	});
-	</script>
+		<script type ="text/javascript">
+			$(document).ready(function(){ 
+				/* Demo purposes only */
+                $(".hover").mouseleave(
+                  function () {
+                    $(this).removeClass("hover");
+                  }
+                );
+			});
+		</script>
 	
 	</head>
 	<body>
@@ -27,9 +35,17 @@
             <div class="customerbox2">
                 <div class="customerbox2-1">
                     <div class="customerbox2-1-1">
-                        <div class="customerbox2-1-1-1">
-                            <a href="resources/pdf/BBSFILEevent0.pdf" target="_blank"><img src="resources/pdfimg/0.JPG"></a>
-                        </div>
+	                    <figure class="snip1384">
+	                        <div class="customerbox2-1-1-1">
+	                            <img src="resources/pdfimg/0.JPG">
+		                        <figcaption>
+		                            <a href="resources/pdf/BBSFILEevent0.pdf" target="_blank"></a>
+					                <h3>Fleece Marigold</h3>
+					                <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
+					                <i class="ion-ios-arrow-right"></i>
+				              	</figcaption>
+	                        </div>
+	                    </figure>
                         <div class="customerbox2-1-1-2">
                             <h4>en_DAB_DPPC_IS12.6</h4>
                         </div>
@@ -80,9 +96,17 @@
                         </div>
                     </div>
                     <div class="customerbox2-1-1">
-						<div class="customerbox2-1-1-1">
-                            <a href="resources/pdf/BBSFILEevent6.pdf" target="_blank"><img src="resources/pdfimg/6.JPG"></a>
-                        </div>
+                    	<figure class="snip1384">
+	                        <div class="customerbox2-1-1-1">
+	                            <img src="resources/pdfimg/6.JPG">
+		                        <figcaption>
+		                            <a href="resources/pdf/BBSFILEevent6.pdf" target="_blank"></a>
+					                <h3>Fleece Marigold</h3>
+					                <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
+					                <i class="ion-ios-arrow-right"></i>
+				              	</figcaption>
+	                        </div>
+	                    </figure>
                         <div class="customerbox2-1-1-2">
                             <h4>en_DAB_DACU_800</h4>
                         </div>
@@ -149,9 +173,17 @@
                         </div>
                     </div>
                     <div class="customerbox2-1-1">
-                        <div class="customerbox2-1-1-1">
-                            <a href="resources/pdf/BBSFILEevent14.pdf" target="_blank"><img src="resources/pdfimg/14.JPG"></a>
-                        </div>
+                        <figure class="snip1384">
+	                        <div class="customerbox2-1-1-1">
+	                            <img src="resources/pdfimg/14.JPG">
+		                        <figcaption>
+		                            <a href="resources/pdf/BBSFILEevent14.pdf" target="_blank"></a>
+					                <h3>Fleece Marigold</h3>
+					                <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
+					                <i class="ion-ios-arrow-right"></i>
+				              	</figcaption>
+	                        </div>
+	                    </figure>
                         <div class="customerbox2-1-1-2">
                             <h4>en_DAB_DSRC_BT.pdf</h4>
                         </div>
@@ -162,9 +194,17 @@
                 
                 <div class="customerbox2-1">
                     <div class="customerbox2-1-1">
-                        <div class="customerbox2-1-1-1">
-                            <a href="resources/pdf/BBSFILEevent15.pdf" target="_blank"><img src="resources/pdfimg/15.JPG"></a>
-                        </div>
+                        <figure class="snip1384">
+	                        <div class="customerbox2-1-1-1">
+	                            <img src="resources/pdfimg/15.JPG">
+		                        <figcaption>
+		                            <a href="resources/pdf/BBSFILEevent15.pdf" target="_blank"></a>
+					                <h3>Fleece Marigold</h3>
+					                <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
+					                <i class="ion-ios-arrow-right"></i>
+				              	</figcaption>
+	                        </div>
+	                    </figure>
                         <div class="customerbox2-1-1-2">
                             <h4>en_DAB_DSPN</h4>
                         </div>
@@ -231,9 +271,17 @@
                         </div>
                     </div>
                     <div class="customerbox2-1-1">
-                        <div class="customerbox2-1-1-1">
-                            <a href="resources/pdf/BBSFILEevent23.pdf" target="_blank"><img src="resources/pdfimg/23.JPG"></a>
-                        </div>
+                        <figure class="snip1384">
+	                        <div class="customerbox2-1-1-1">
+	                            <img src="resources/pdfimg/23.JPG">
+		                        <figcaption>
+		                            <a href="resources/pdf/BBSFILEevent23.pdf" target="_blank"></a>
+					                <h3>Fleece Marigold</h3>
+					                <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
+					                <i class="ion-ios-arrow-right"></i>
+				              	</figcaption>
+	                        </div>
+	                    </figure>
                         <div class="customerbox2-1-1-2">
                             <h4>LSR_Conti_Mix_EN</h4>
                         </div>

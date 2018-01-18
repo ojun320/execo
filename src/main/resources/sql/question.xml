@@ -25,7 +25,7 @@
       
    
    <select id="questionDetailData" parameterType="hashmap" resultType="hashmap"> <!-- 리스트목록 클릭 시 상세보기 조회 -->
-      select * from question where Qno = ${Qno}
+      select * from question where Qno = #{Qno}
    </select>
    
    <!-- 관리자 답변기능  -->

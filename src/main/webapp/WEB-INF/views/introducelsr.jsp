@@ -77,13 +77,13 @@
                     <img src="resources/img/emptybar.jpg">
                 </div>
                 <div class="intromenu14">
-                    <img src="resources/img/intromodel1.jpg">
+                    <a href="resources/pdf/BBSFILEevent25.pdf" target="_blank"><img src="resources/img/intromodel1.jpg"></a>
                 </div>
                 <div class="intromenu15">
-                    <img src="resources/img/intromodel2.jpg">
+                    <a href="resources/pdf/BBSFILEevent24.pdf" target="_blank"><img src="resources/img/intromodel2.jpg"></a>
                 </div>
                 <div class="intromenu16">
-                    <img src="resources/img/intromodel3.jpg">
+                    <a href="resources/pdf/BBSFILEevent23.pdf" target="_blank"><img src="resources/img/intromodel3.jpg"></a>
                 </div>
                 <div class="intromenu17">
                     <img src="resources/img/intromodel4.jpg">

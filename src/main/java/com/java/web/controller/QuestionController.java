@@ -19,16 +19,10 @@ import com.java.web.util.HttpUtil;
 public class QuestionController {
 
    @RequestMapping("/notice") //List 보여주기 
-   public ModelAndView notice(ModelAndView mav, HttpSession session){                                            
-      HashMap<String, HashMap<String, Object>> id = (HashMap<String, HashMap<String, Object>>) session.getAttribute("id");
-      HashMap<String, HashMap<String, Object>> user = (HashMap<String, HashMap<String, Object>>) session.getAttribute("user");
-      if(user == null){
-		  mav.setViewName("redirect:/alert");
-		  return mav;
-	  }else{		  
-		  mav.setViewName("notice"); //경로설정 확인
-	      return mav;
-	  }
+   public ModelAndView notice(ModelAndView mav, HttpSession session){
+//	  System.out.println("notice");
+	  mav.setViewName("notice");
+      return mav;
    }   
    
    @RequestMapping("/MasterPage1Search")//게시판 검색기능 
@@ -46,7 +40,7 @@ public class QuestionController {
 		  return mav;
 	  }else{
 		  mav.addObject("auth", user.get("data").get("auth"));		  
-	      mav.setViewName("Detail"); //경로설정 확인
+	      mav.setViewName("Detail");
 	      return mav;
 	  }
    }   
@@ -64,10 +58,8 @@ public class QuestionController {
  		}
  		
 //------------------------------------------------------------------------------------------------------------
-   
-   
-   
-   @RequestMapping("/Write") //글작성하기
+
+   @RequestMapping("/Write") //글작성 페이지
    public ModelAndView write(ModelAndView mav, HttpSession session ){
 	   mav.setViewName("Write");
       return mav;
@@ -79,7 +71,7 @@ public class QuestionController {
    @RequestMapping("/MasterPageData") //List 보여주기 
    public ModelAndView masterPageData(ModelAndView mav, HttpServletRequest req, HttpSession session){ 
       HashMap<String, HashMap<String, Object>> id = (HashMap<String, HashMap<String, Object>>) session.getAttribute("id");
-      HashMap<String, Object> map = new HashMap<String, Object>();  //데이터를 요청하는게 필요없으면 안적어줌 req 
+      HashMap<String, Object> map = new HashMap<String, Object>();
       map = tsi.getData();
       /*map = tsi.getData();*/
       return HttpUtil.makeHashToJsonModelAndView(map);
@@ -88,9 +80,8 @@ public class QuestionController {
    @RequestMapping(value="/DetailData", method=RequestMethod.POST) //게시판안에 있는 글 상세보기 
    public ModelAndView detailData(ModelAndView mav, HttpServletRequest req,HttpSession session){
 	   HashMap<String, HashMap<String, Object>> user = (HashMap<String, HashMap<String, Object>>) session.getAttribute("user");
-	   HashMap<String, Object> param = new HashMap<String, Object>(); // 요청하는 데이터면 담는 그릇은 parameter 
+	   HashMap<String, Object> param = new HashMap<String, Object>();
       param.put("Qno", req.getParameter("Qno"));
-      /*param.put("auth", user.get("data").get("auth"));*/
       param.put("id", user.get("data").get("id"));      
       HashMap<String, Object> map = tsi.getDetailData(param);
       return HttpUtil.makeHashToJsonModelAndView(map);

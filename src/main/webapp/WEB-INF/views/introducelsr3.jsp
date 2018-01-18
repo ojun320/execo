@@ -31,19 +31,19 @@
                     <img src="resources/img/baumerbarimg1.jpg">
                 </div>
                 <div class="baumerproductimg2-2">
-                    <img src="resources/img/baumerproductimg1.jpg">
+                    <a href="resources/pdf/BBSFILEevent13.pdf" target="_blank"><img src="resources/img/baumerproductimg1.jpg"></a>
                 </div>
                 <div class="baumerproductimg2-3">
                     <img src="resources/img/baumerbarimg2.jpg">
                 </div>
                 <div class="baumerproductimg2-4">
-                    <img src="resources/img/baumerproductimg2.jpg">
+                    <a href="resources/pdf/BBSFILEevent12.pdf" target="_blank"><img src="resources/img/baumerproductimg2.jpg"></a>
                 </div>
                 <div class="baumerproductimg2-5">
                     <img src="resources/img/baumerbarimg3.jpg">
                 </div>
                 <div class="baumerproductimg2-6">
-                    <img src="resources/img/baumerproductimg3.jpg">
+                    <a href="resources/pdf/BBSFILEevent11.pdf" target="_blank"><img src="resources/img/baumerproductimg3.jpg"></a>
                 </div>
                 <div class="baumerproductimg2-7">
                     <img src="resources/img/baumerbarimg4.jpg">
@@ -55,19 +55,19 @@
                     <img src="resources/img/baumerbarimg1.jpg">
                 </div>
                 <div class="baumerproductimg2-2">
-                    <img src="resources/img/baumerproductimg4.jpg">
+                    <a href="resources/pdf/BBSFILEevent11.pdf" target="_blank"><img src="resources/img/baumerproductimg4.jpg"></a>
                 </div>
                 <div class="baumerproductimg2-3">
                     <img src="resources/img/baumerbarimg2.jpg">
                 </div>
                 <div class="baumerproductimg2-4">
-                    <img src="resources/img/baumerproductimg5.jpg">
+                    <a href="resources/pdf/BBSFILEevent15.pdf" target="_blank"><img src="resources/img/baumerproductimg5.jpg"></a>
                 </div>
                 <div class="baumerproductimg2-5">
                     <img src="resources/img/baumerbarimg3.jpg">
                 </div>
                 <div class="baumerproductimg2-6">
-                    <img src="resources/img/baumerproductimg6.jpg">
+                    <a href="resources/pdf/BBSFILEevent17.pdf" target="_blank"><img src="resources/img/baumerproductimg6.jpg"></a>
                 </div>
                 <div class="baumerproductimg2-7">
                     <img src="resources/img/baumerbarimg4.jpg">
@@ -79,13 +79,13 @@
                     <img src="resources/img/baumerbarimg1.jpg">
                 </div>
                 <div class="baumerproductimg2-2">
-                    <img src="resources/img/baumerproductimg7.jpg">
+                    <a href="resources/pdf/BBSFILEevent2.pdf" target="_blank"><img src="resources/img/baumerproductimg7.jpg"></a>
                 </div>
                 <div class="baumerproductimg2-3">
                     <img src="resources/img/baumerbarimg2.jpg">
                 </div>
                 <div class="baumerproductimg2-4">
-                    <img src="resources/img/baumerproductimg8.jpg">
+                    <a href="resources/pdf/BBSFILEevent5.pdf" target="_blank"><img src="resources/img/baumerproductimg8.jpg"></a>
                 </div>
                 <div class="baumerproductimg2-5">
                     <img src="resources/img/baumerbarimg3.jpg">
@@ -103,25 +103,25 @@
                     <img src="resources/img/baumerbarimg5.jpg">
                 </div>
                 <div class="baumerproductimg6-2">
-                    <img src="resources/img/baumerproductimg10.jpg">
+                    <a href="resources/pdf/BBSFILEevent6.pdf" target="_blank"><img src="resources/img/baumerproductimg10.jpg"></a>
                 </div>
                 <div class="baumerproductimg6-3">
                     <img src="resources/img/baumerbarimg6.jpg">
                 </div>
                 <div class="baumerproductimg6-4">
-                    <img src="resources/img/baumerproductimg11.jpg">
+                    <a href="resources/pdf/BBSFILEevent20.pdf" target="_blank"><img src="resources/img/baumerproductimg11.jpg"></a>
                 </div>
                 <div class="baumerproductimg6-5">
                     <img src="resources/img/baumerbarimg7.jpg">
                 </div>
                 <div class="baumerproductimg6-6">
-                    <img src="resources/img/baumerproductimg12.jpg">
+                    <a href="resources/pdf/BBSFILEevent21.pdf" target="_blank"><img src="resources/img/baumerproductimg12.jpg"></a>
                 </div>
                 <div class="baumerproductimg6-7">
                     <img src="resources/img/baumerbarimg8.jpg">
                 </div>
                 <div class="baumerproductimg6-8">
-                    <img src="resources/img/baumerproductimg13.jpg">
+                    <a href="resources/pdf/BBSFILEevent19.pdf" target="_blank"><img src="resources/img/baumerproductimg13.jpg"></a>
                 </div>
                 <div class="baumerproductimg6-9">
                     <img src="resources/img/baumerbarimg9.jpg">
@@ -133,19 +133,19 @@
                     <img src="resources/img/baumerbarimg1.jpg">
                 </div>
                 <div class="baumerproductimg2-2">
-                    <img src="resources/img/baumerproductimg14.jpg">
+                    <a href="resources/pdf/BBSFILEevent9.pdf" target="_blank"><img src="resources/img/baumerproductimg14.jpg"></a>
                 </div>
                 <div class="baumerproductimg2-3">
                     <img src="resources/img/baumerbarimg2.jpg">
                 </div>
                 <div class="baumerproductimg2-4">
-                    <img src="resources/img/baumerproductimg15.jpg">
+                    <a href="resources/pdf/BBSFILEevent11.pdf" target="_blank"><img src="resources/img/baumerproductimg15.jpg"></a>
                 </div>
                 <div class="baumerproductimg2-5">
                     <img src="resources/img/baumerbarimg3.jpg">
                 </div>
                 <div class="baumerproductimg2-6">
-                    <img src="resources/img/baumerproductimg16.jpg">
+                    <a href="resources/pdf/BBSFILEevent9.pdf" target="_blank"><img src="resources/img/baumerproductimg16.jpg"></a>
                 </div>
                 <div class="baumerproductimg2-7">
                     <img src="resources/img/baumerbarimg4.jpg">

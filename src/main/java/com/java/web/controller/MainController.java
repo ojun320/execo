@@ -114,4 +114,10 @@ public class MainController {
 	return mav;
 	}
 	
+	@RequestMapping("/test") // 제품소개5 화면
+	public ModelAndView test(ModelAndView mav){
+		mav.setViewName("test");
+	return mav;
+	}
+	
 }

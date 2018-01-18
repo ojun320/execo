@@ -34,12 +34,12 @@ public class CustomerController {
 			  mav.setViewName("redirect:/alert");
 			  return mav;
 		  }else{		  
-			  mav.setViewName("customer"); //경로설정 확인
+			  mav.setViewName("customer");
 		      return mav;
 		  }
 	   }  
 	
-	@RequestMapping("/Write1") //글작성하기
+	@RequestMapping("/Write1") //글작성 화면
 	public ModelAndView write(ModelAndView mav, HttpSession session){
 		mav.setViewName("Write1");
 	return mav;
@@ -47,19 +47,31 @@ public class CustomerController {
 	
 	@RequestMapping("/customer1") //customer1 화면
 	public ModelAndView customer1(ModelAndView mav, HttpSession session){
-		mav.setViewName("customer1");
-	return mav;
+		HashMap<String, HashMap<String, Object>> user = (HashMap<String, HashMap<String, Object>>) session.getAttribute("user");
+		if(user == null){
+			  mav.setViewName("redirect:/alert");
+			  return mav;
+		  }else{		  
+			  mav.setViewName("customer1");
+		      return mav;
+		  }
 	}
 	
 	@RequestMapping("/customer2") //customer2 화면
 	public ModelAndView customer2(ModelAndView mav, HttpSession session){
-		mav.setViewName("customer2");
-	return mav;
+		HashMap<String, HashMap<String, Object>> user = (HashMap<String, HashMap<String, Object>>) session.getAttribute("user");
+		if(user == null){
+			  mav.setViewName("redirect:/alert");
+			  return mav;
+		  }else{		  
+			  mav.setViewName("customer2");
+		      return mav;
+		  }
 	}
 	
 	@RequestMapping("/newsData")
 	public ModelAndView newsData(HttpServletRequest req, ModelAndView mav){
-
+//		System.out.println(req.getParameter("start"));
 		HashMap<String, Object> param = new HashMap<String, Object>();
 		if(req.getParameter("start") != null){
 			param.put("start", Integer.parseInt(req.getParameter("start")));
@@ -71,7 +83,7 @@ public class CustomerController {
 		}else {
 			param.put("viewRow", 10);
 		}
-		// 디비에서 받아 온 hashmap 데이터를 json으로 변경하여 model 값으로 넣어 준다.
+		
 		JSONObject jsonObject = new JSONObject();
 		jsonObject = JSONObject.fromObject(JSONSerializer.toJSON(nlsi.getNewsList(param)));
 		mav.addObject("message", jsonObject.toString());		

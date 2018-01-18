@@ -5,27 +5,24 @@
 <!DOCTYPE html>
 <html>
     <title>
-        엑세코실업 [EXECO]
+        	엑세코실업 [EXECO]
     </title>
     <head>
         <link rel ="stylesheet" href ="resources/css/main.css">
         <link rel="stylesheet" href="resources/css/login.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script>
+        <script type="text/javascript">
         
         var ui = "";
         
        		$(document).ready(function(){
-       			$("#loginbtn").off().on("click", function(){
-       	 			login();
-       	 	    });
        			
-       			$("#logincns").off().on("click", function(){
-       				location.href ="";
-       	 	    });
        		});
        		
+       		function logincns(){
+       			location.href ="";
+       		}
        		
 		/* 로그인 */
 		function login(){ 	   
@@ -33,35 +30,31 @@
 			var id = $("#id").val();
 			var pw = $("#pw").val();	          
 		 	             
-			if(id == "" || pw == ""){
-			alert("아이디 또는 비밀번호가 입력되지 않았습니다!!");
-			return false;
-		}	             
-			$.ajax({
-			type:"post", 
-			url:"LoginData",
-			data:{"id": id, "pw": pw},	                
-			datatype:"json"  
-			}).done(function(data){
-			var result = data;
-			ui = id;
-			             		 
-		if(result.data != null){  	            		 	            		 
-			//ui = session.getAttribute("user");		            		
-			alert(ui + "님 환영합니다.");
-			//$('#sjloginbtn').removeClass('m_col_disb').addClass('m_col_disn');
-			//$('#sjSignup').removeClass('m_col_disb').addClass('m_col_disn');
-			//$('#sjlogoutbtn').addClass('m_col_disb');
-			//$('#sjlabel').addClass('m_col_disb');
-			location.href ="";
-		}else{
-			alert("로그인 실패");
-			//location.replace("Logout"); // 로그인실패시 보낼 경로
-		}
-		
-		}).fail(function(x){
-			alert("오류 다시로그인하세요."); 	                
-		});
+				if(id == "" || pw == ""){
+				alert("아이디 또는 비밀번호가 입력되지 않았습니다!!");
+				return false;
+				}	    
+				
+				$.ajax({
+				type:"post", 
+				url:"LoginData",
+				data:{"id": id, "pw": pw},	                
+				datatype:"json"  
+				}).done(function(data){
+				var result = data;
+				ui = id;
+				             		 
+			if(result.data != null){  	            		 	            		 	            		
+				alert(ui + "님 환영합니다.");
+				location.href ="";
+			}else{
+				alert("로그인 실패");
+ 				location.replace("Logout"); 
+			}
+			
+			}).fail(function(x){
+				alert("오류 다시로그인하세요."); 	                
+			});
 		 				            
 		}
         </script>
@@ -79,7 +72,7 @@
                        <h2>Id</h2>
                    </div>
                    <div class="loginbox1-2">
-                       <input type="text" class="logininputbox" id="id" name="loginid">
+                       <input type="text" class="logininputbox" id="id" name="loginid" maxLength="10">
                    </div>
                 </div>
                 <div class="loginmid-2">
@@ -87,12 +80,12 @@
                        <h2>Password</h2>
                    </div>
                    <div class="loginbox2-2">
-                       <input type="password" class="logininputbox" id="pw" name="loginpw">
+                       <input type="password" class="logininputbox" id="pw" name="loginpw" maxLength="10">
                    </div>
                 </div>
                 <div class="loginbtm">
-                    <button type="button" class="loginButton1" id="loginbtn">확인</button> 
-                	<button type="button" class="loginButton2" id="logincns">취소</button>
+                    <button type="button" class="loginButton1" id="loginbtn" onclick="login()">확인</button> 
+                	<button type="button" class="loginButton2" id="logincns" onclick="logincns()">취소</button>
                 </div>
             </div>
         </div>

@@ -15,111 +15,136 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	    <script  src="https://code.jquery.com/jquery-2.2.4.js"
-	    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-	    crossorigin="anonymous"></script>
 	    <script type="text/javascript">
     	
 		var data = []; // 데이터 담을 배열 변수 선언
-
+		var hash = location.hash; // url에서 hash값 가져오기.
+		if(hash == ""){
+			location.hash = "#mainsec"; // hash에 값이 없을때 초기값 설정
+		}
+		
+		function htmlLoad(){
+	  		var url = location.hash.substr(1, location.hash.length);
+	  		loginCheck(url);
+	  	}
+		
         $(document).ready(function(){
         	var viewRow = 10; // 화면에 보여질 행 갯수
         	var page = 1; // 현재 페이지 값
         	var totCnt = 0; // 데이터 전체 객수
         	var pageGroup = 1; // 현재 페이지 값
         	var pageView = 5; // 페이징 버튼 객수
-        	var hash = location.hash;
+//         	var hash = location.hash;
         	var tag = "";
-        	function htmlLoad(){
-        		var url = hash.substr(1, hash.length);
-       		 	$("section").load(url);
-        	}
+        	var slideIndex = 0;
+        	
+//         	function htmlLoad(){
+//         		var url = location.hash.substr(1, location.hash.length);
+//        		 	$("section").load(url);
+//         	}
         	// 제품소개1 클릭했을시 hash전환
     		$(".midboxmid1").off().on("click", function(){
-    			hash= "#introducelsr";
+    			location.hash= "#introducelsr";
     	  		htmlLoad();
     	  	});
     		// 제품소개2 클릭했을시 hash전환
     		$(".midboxmid2").off().on("click", function(){
-    			hash= "#introducelsr1";
+    			location.hash= "#introducelsr1";
     	  		htmlLoad();
     	  	});
     		// 제품소개3 클릭했을시 hash전환
     		$(".midboxmid3").off().on("click", function(){
-    			hash= "#introducelsr2";
+    			location.hash= "#introducelsr2";
     	  		htmlLoad();
     	  	});
     		
-    		function createPaging(){
-    			var paging = totCnt/viewRow; 
-    			var end = (pageView * pageGroup); // 10 * 2 = 20 
-    			var start = (end - pageView); // 20 - 10 = 10
+//     		function createPaging(){
+//     			var paging = totCnt/viewRow; 
+//     			var end = (pageView * pageGroup); // 10 * 2 = 20 
+//     			var start = (end - pageView); // 20 - 10 = 10
     			
-    			if(paging < end){
-    				end = paging;
-    			}
+//     			if(paging < end){
+//     				end = paging;
+//     			}
     			
-    			//전체 행 / 보여줄행 --> 페이지 수 
-    			$(".paging").empty(); // div 태그 속에 a 태그를 초기화 한다.
-    			var k = 0; // 소연이 보아라... 너무 힘들었도다... 어쩔... :( ★★
-    						//   :)  good
+//     			//전체 행 / 보여줄행 --> 페이지 수 
+//     			$(".paging").empty(); // div 태그 속에 a 태그를 초기화 한다.
+//     			var k = 0; // 소연이 보아라... 너무 힘들었도다... 어쩔... :( ★★
+//     						//   :)  good
     			
-    			if(end > pageView){
-    				$(".paging").append('<a class="select" href="#' + ((start+1) - pageView) + '">이전페이지</a>');
-    				k = 1;
-    			}
+//     			if(end > pageView){
+//     				$(".paging").append('<a class="select" href="#' + ((start+1) - pageView) + '">이전페이지</a>');
+//     				k = 1;
+//     			}
     			
-    			for(var i = start; i < end; i++){
-    				$(".paging").append("<a href='#" + (i + 1) + "'>" + (i + 1) + "</a>");
-    				if(page == (i + 1)){
-    					$(".paging a").eq(k).addClass("chk");
-    				}
-    				k++;
-    			}
+//     			for(var i = start; i < end; i++){
+//     				$(".paging").append("<a href='#" + (i + 1) + "'>" + (i + 1) + "</a>");
+//     				if(page == (i + 1)){
+//     					$(".paging a").eq(k).addClass("chk");
+//     				}
+//     				k++;
+//     			}
     			
-    			if(end >= pageView && paging > end){
-    				$(".paging").append('<a href="#' + (end + 1) + '">다음페이지</a>');
-    			}
+//     			if(end >= pageView && paging > end){
+//     				$(".paging").append('<a href="#' + (end + 1) + '">다음페이지</a>');
+//     			}
     			
     			
-    			$(".paging a").off().on("click", function(){ //페이지 전환 이벤트를 작성 
-    				page = $(this).text();
-    				if(page == "다음페이지"){
-    					page = (pageGroup * pageView) + 1; 
-    					pageGroup++;
-    				}else if(page == "이전페이지"){
-    					page = (pageGroup * pageView) + 1;
-    					pageGroup--;
-    				}
-    				setTimeout(function(){
-    					initData(); // 디비에서 데이터 다시 가져 오기 위하여 함수 호출
-    				}, 100); // 0.1초 후에 실행 하기 위하여 setTimeout() 함수를 실행한다.
-    			});
-    		}
+//     			$(".paging a").off().on("click", function(){ //페이지 전환 이벤트를 작성 
+//     				page = $(this).text();
+//     				if(page == "다음페이지"){
+//     					page = (pageGroup * pageView) + 1; 
+//     					pageGroup++;
+//     				}else if(page == "이전페이지"){
+//     					page = (pageGroup * pageView) + 1;
+//     					pageGroup--;
+//     				}
+//     				setTimeout(function(){
+//     					initData(); // 디비에서 데이터 다시 가져 오기 위하여 함수 호출
+//     				}, 100); // 0.1초 후에 실행 하기 위하여 setTimeout() 함수를 실행한다.
+//     			});
+//     		}
         	
         	function initData(){ //디비안에 있는 데이터 가져오기 
-    			var hash = location.hash; // a 태그의 이벤트로 발생한 hash 값을 가져온다.
-    			if(hash != ""){ // hash 값이 있을 경우 page 변수의 값으로 사용한다.
-    				page = hash.substr(1, hash.length);
-    				pageGroup = Math.ceil(page / pageView);
-    			}
+//     			var hash = location.hash; // a 태그의 이벤트로 발생한 hash 값을 가져온다.
+//     			if(hash != ""){ // hash 값이 있을 경우 page 변수의 값으로 사용한다.
+//     				page = hash.substr(1, hash.length);
+//     				pageGroup = Math.ceil(page / pageView);
+//     			}
     						
-    			var end = (viewRow * page); // 10 * 2 = 20 
-    			var start = (end - viewRow); // 20 - 10 = 10
+//     			var end = (viewRow * page); // 10 * 2 = 20 
+//     			var start = (end - viewRow); // 20 - 10 = 10
     	
     			$.ajax({
     					type:"post", // post 방식으로 통신 요청
     					url:"listData", // Spring에서 만든 URL 호출
     					dataType :"json",
-    					data:{"start":start, "viewRow":viewRow} // 파라메터로 사용할 변수 값 객체 넣기
+    					data:{"start":0, "viewRow":viewRow} // 파라메터로 사용할 변수 값 객체 넣기
     			}).done(function(result){ // 비동기식 데이터 가져오기
     				data = result.data; // JSON으로 받은 데이터를 사용하기 위하여 전역변수인 data에 값으로 넣기
-    				console.log(data);
-    				totCnt = result.totCnt.tot;
+//     				console.log(data);
+//     				totCnt = result.totCnt.tot;
     				init(result.data);
-    				createPaging(); // 페이지 링크 표현하기 
+//     				createPaging(); // 페이지 링크 표현하기 
     			});
         	}
+        	
+        	function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 4000); // Change image every 2 seconds
+            }
         	
         	
     		function init(data){
@@ -173,11 +198,11 @@
   		      $.ajax({
   		            type:"post", 
   		            url:"newsData", // Spring에서 만든 URL 호출
-  		            data:{"start":start, "viewRow":viewRow} // 파라메터로 사용할 변수 값 객체 넣기
+  		            data:{"start":0, "viewRow":viewRow} // 파라메터로 사용할 변수 값 객체 넣기
   		      }).done(function(d){ // 비동기식 데이터 가져오기
   		         var result = JSON.parse(d);
   		         data = result.list;
-  		         totCnt = result.totCnt.tot;
+//   		         totCnt = result.totCnt.tot;
   		         
   		         createHtml1(); // 화면에 표현하기 위하여 함수 호출
 
@@ -185,6 +210,7 @@
   		   }
     		initData();
     		initData1();
+    		showSlides();
         });
         </script>
         <style type="text/css">
@@ -192,6 +218,14 @@
 			td A:visited {text-decoration:none; color:#000000;}
 			td A:active {text-decoration:none; color:#000000;}
 			td A:hover {text-decoration:none; color:#ff3f3f;}
+
+			.eventsbox img {
+				border : 0;
+			}
+			.eventsbox img:hover {
+			opacity:0.2;
+			filter:alpha(opacity=80);
+			}
 		</style>
 
     </head>
@@ -217,28 +251,6 @@
           <span class="dot" onclick="currentSlide(1)"></span> 
           <span class="dot" onclick="currentSlide(2)"></span> 
         </div>
-        
-        <script>
-            var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                   slides[i].style.display = "none";  
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {slideIndex = 1}    
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
-                setTimeout(showSlides, 4000); // Change image every 2 seconds
-            }
-        </script>
         
         <!--중간미드부분2-->
         <div class="mainmidbox2">
@@ -267,7 +279,7 @@
                     <div class="clear-midbox1"></div>
                     <div class="midbox1-2">
                         <div class="midboxtop-1">
-                            <p>회사소개 영상</p>
+                            <p>EXECO - 엑세코실업 rico Intro</p>
                         </div>
                         <div class="videobox">
                             <iframe width="318" height="180" src="//player.vimeo.com/video/116044275" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
@@ -294,13 +306,13 @@
                             <p>제품소개</p>
                         </div>
                         <div class="midboxmid1">
-                            <a href="#"><img src="resources/img/mainlsrimg.JPG"></a>
+                            <a href="javascript:void(0)"><img src="resources/img/mainlsrimg.JPG"></a>
                         </div>
                         <div class="midboxmid2">
-                            <a href="#"><img src="resources/img/mainsensorsimg.JPG"></a>
+                            <a href="javascript:void(0)"><img src="resources/img/mainsensorsimg.JPG"></a>
                         </div>
                         <div class="midboxmid3">
-                            <a href="#"><img src="resources/img/mainsolutionimg.JPG"></a>
+                            <a href="javascript:void(0)"><img src="resources/img/mainsolutionimg.JPG"></a>
                         </div>
                     </div>
                     <div class="clear-midbox2"></div>

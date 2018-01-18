@@ -11,6 +11,7 @@
         <link rel ="stylesheet" href ="resources/css/main.css">
         <link rel="stylesheet" href="resources/css/customer.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript">
 		$(document).ready(function(){
@@ -130,7 +131,13 @@
 		      
 		      var hash = location.hash; // a 태그의 이벤트로 발생한 hash 값을 가져온다.
 		      if(hash != ""){ // hash 값이 있을 경우 page 변수의 값으로 사용한다.
-		         page = hash.substr(1, hash.length);
+// 		    	  	console.log("hash : " ,hash);
+		      		if(hash == "#customer"){
+		      			page = 1;
+		      		}else{
+		      			page = hash.substr(1, location.hash.length);
+		      		}
+// 		      		console.log("page : " ,page);
 		      }      
 		         
 		      var end = (viewRow * page); // 10 * 2 = 20 
@@ -139,7 +146,7 @@
 		      $.ajax({
 		            type:"post", 
 		            url:"newsData", // Spring에서 만든 URL 호출
-		            data:{"start":start, "viewRow":viewRow} // 파라메터로 사용할 변수 값 객체 넣기
+ 		            data:{"start":start, "viewRow":viewRow} // 파라메터로 사용할 변수 값 객체 넣기
 		      }).done(function(d){ // 비동기식 데이터 가져오기
 		         var result = JSON.parse(d);
 		         data = result.list;
@@ -175,7 +182,7 @@
                        
                    </div>
                    
-                   
+                   <hr>
                    <div class="page">
                        
                    </div>

@@ -38,13 +38,13 @@
     height: 1261px;
     border: 1px solid;
     margin-left: 471.5px;
-    background-color: #f0f0f0;
+    background-color: gainsboro;
 }
 
 .bod-count {
 	width: 945px;
 	height: 50px;
-	background-color: #f0f0f0;
+	background-color: gainsboro;
 	line-height: 50px;
 	margin-left: 13px;
 }
@@ -140,10 +140,10 @@ hr {
 }
 .page {
 	width: 958px;
-	height: 48px;
+	height: 46px;
 	float: left;
 	text-align: center;
-	background-color: #f0f0f0;
+	background-color: gainsboro;
 }
 
 /*****************************************************************/
@@ -220,7 +220,7 @@ hr {
     color: #000000;
     background-color: #b2b2b2;
     font-size: 15px;
-    margin-top: 10px;
+    margin-top: 7px;
     margin-left: 5px;
 }
 

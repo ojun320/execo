@@ -11,12 +11,8 @@
         <link rel ="stylesheet" href ="resources/css/main.css">
         <link rel="stylesheet" href="resources/css/notice.css">
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- 	    <script src="https://code.jquery.com/jquery-2.2.4.js" -->
-<!-- 	    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" -->
-<!-- 	    crossorigin="anonymous"></script> -->
+<!-- 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	    <script type="text/javascript">
-    	
 		var data = []; // 데이터 담을 배열 변수 선언
 		
 	    $(document).ready(function(){
@@ -25,6 +21,7 @@
 	    	var totCnt = 0; // 데이터 전체 객수
 	    	var pageGroup = 1; // 현재 페이지 값
 	    	var pageView = 5; // 페이징 버튼 객수
+	    	
 	    	
 	    	$.ajax({
 	            url:"LoginCheck",
@@ -41,7 +38,7 @@
 	            	$(".writebtn").hide();
 	            }    
 	         });
-	    	
+//페에징----------------------------------------------------------------------------------	    	
     	function createPaging(){
 			var paging = totCnt/viewRow; 
 			var end = (pageView * pageGroup); // 10 * 2 = 20 
@@ -88,11 +85,18 @@
 				}, 100); // 0.1초 후에 실행 하기 위하여 setTimeout() 함수를 실행한다.
 			});
 		}
+/***********************************************************************************/
     	
     	function initData(){ //디비안에 있는 데이터 가져오기 
 			var hash = location.hash; // a 태그의 이벤트로 발생한 hash 값을 가져온다.
 			if(hash != ""){ // hash 값이 있을 경우 page 변수의 값으로 사용한다.
-				page = hash.substr(1, hash.length);
+// 				console.log("hash : " ,hash);
+				if(hash == "#notice"){
+					page = 1;
+				}else{
+					page = hash.substr(1, location.hash.length);	
+				}
+// 				console.log("page : " ,page);
 				pageGroup = Math.ceil(page / pageView);
 			}
 						
@@ -103,17 +107,18 @@
 					type:"post", // post 방식으로 통신 요청
 					url:"listData", // Spring에서 만든 URL 호출
 					dataType :"json",
-					data:{"start":start, "viewRow":viewRow} // 파라메터로 사용할 변수 값 객체 넣기
-			}).done(function(result){ // 비동기식 데이터 가져오기
+					data:{"start":start} // 파라메터로 사용할 변수 값 객체 넣기
+			}).done(function(result){
+// 				console.log(result);// 비동기식 데이터 가져오기
 				data = result.data; // JSON으로 받은 데이터를 사용하기 위하여 전역변수인 data에 값으로 넣기
-				console.log(data);
+// 				console.log(data);
+// 				console.log("토탈 값 : "+result.totCnt.tot);
 				totCnt = result.totCnt.tot;
 				init(result.data);
 				createPaging(); // 페이지 링크 표현하기 
 			});
     	}
-    	
-    	
+//리스트출력-------------------------------------------------------------------------------    	
 		function init(data){
 				$("tbody").empty();
 				for(var i = 0; i < data.length; i++){
@@ -126,30 +131,16 @@
 					$("tbody").append(html);
 				}
 
-//----------------------------------------------- 작성버튼 클릭시 부분전환-------------------------------------------------------------
-			     $(".writebtn").off().on("click",function(){
-		               hash = "#Write";
-		               htmlLoad();
-		            });
-		            
-		            function htmlLoad(){
-		                 var url = hash.substr(1, hash.length)
-		                 $("section").load(url);
-		              }
-//------------------------------------------------------------------------------------------------------------------------------
-
-
 				 if(data.length < 1){
 			           	var tag = "<tr class='list-text2'>"; 
 			   		    tag += "<td>데이터가 없습니다.</td>";
 			   		    tag += "</tr>";
 			           	$("tbody").append(tag);
-			    } 
-			    
+			    }  
 		}
 		initData();	
-		
-		$("#contact_selecttype").on("change", function(){ //주제선택
+//검색-----------------------------------------------------------------------------------		
+		  $("#contact_selecttype").on("change", function(){ //주제선택
 			
 	      });
 	      
@@ -160,7 +151,7 @@
 	            data:data,
 	            datatype:"json",
 	            type:"post"
-	            }).done(function(result){         
+	            }).done(function(result){
 	            data = result.list;
 	            init(result.list);       
 	         });
@@ -175,8 +166,21 @@
 	      
 	    	  	//그냥 검색만 누를시 리스트가 늘어나는거 수정
 	      });
+//검색-----------------------------------------------------------------------------------
 
-});
+
+//----------------------------------------------- 작성버튼 클릭시 부분전환-------------------------------------------------------------
+		$(".writebtn").off().on("click",function(){
+			hash = "#Write";
+			htmlLoad();
+		});
+			            
+		function htmlLoad(){
+			var url = hash.substr(1, hash.length)
+			$("section").load(url);
+		}
+//------------------------------------------------------------------------------------------------------------------------------
+	});
     </script>
         
     </head>

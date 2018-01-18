@@ -28,15 +28,14 @@ public class PagingController {
    
    @RequestMapping("/listData")
    public ModelAndView listData(ModelAndView mav, HttpServletRequest req){
+//	   System.out.println(req.getParameter("start"));
 	   HashMap<String, Object> param = new HashMap<String, Object>();
-	      param.put("start", Integer.parseInt(req.getParameter("start")));
-	      param.put("viewRow", Integer.parseInt(req.getParameter("viewRow")));
-	      
-	      // 디비에서 받아 온 hashmap 데이터를 json으로 변경하여 model 값으로 넣어 준다.
+	   param.put("start", Integer.parseInt(req.getParameter("start")));
+	      /*param.put("viewRow", Integer.parseInt(req.getParameter("viewRow")));*/
+
 	      JSONObject jsonObject = new JSONObject();
 	      jsonObject = JSONObject.fromObject(JSONSerializer.toJSON(psi.select(param)));
 	      mav.addObject("message", jsonObject.toString());
-	      
 	      mav.setViewName("json");
 	      return mav;
    }

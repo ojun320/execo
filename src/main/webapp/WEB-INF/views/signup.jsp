@@ -31,7 +31,7 @@
         		phone = $("#phone").val();
         		auth = $("#auth").val();
         		
-        		if(id == "" && pw == "" && name == "" && email == "" && phone == "" && auth == "" && $("#checkid").text()!="완료" && finId!=idText){
+        		if(id == "" || pw == "" || name == "" || email == "" || phone == "" || auth == "" || $("#checkid").text()!="완료" || finId!=idText){
                      alert("값을 모두 입력해주세요.");
                      return false;
         		 }else if(regex.test(email) == false){
@@ -61,6 +61,7 @@
         	$("#phone").keyup(function(){ $(this).val($(this).val().replace(/[^0-9]/gi,"") ); }); // 전화번호 예외처리
         	
         	$("#id").keyup(function(){ $(this).val($(this).val().replace(/[^a-z0-9:\-_]/gi,'') ); }); // 아이디 예외처리
+        	
    });
         
 //--------------------------아이디 중복확인---------------------------------------
@@ -108,7 +109,7 @@
                                 <h2>Id</h2>
                             </div>
                             <div class="signupmid1-x">
-                                <input type="text" class="signupinputbox" placeholder="아이디" id="id" name="id" maxLength="20">
+                                <input type="text" class="signupinputbox" placeholder="아이디" id="id" name="id" maxLength="10">
                             </div>
                         </div>
                         <div class="check_box">
@@ -119,7 +120,7 @@
                                 <h2>Password</h2>
                             </div>
                             <div class="signupmid1-2">
-                                <input type="password" class="signupinputbox" placeholder="비밀번호" id="pw" name="pw" maxLength="20">
+                                <input type="password" class="signupinputbox" placeholder="비밀번호" id="pw" name="pw" maxLength="10">
                             </div>
                         </div>
                         <div class="signupmid1">
@@ -135,7 +136,7 @@
                                 <h2>Email</h2>
                             </div>
                             <div class="signupmid1-2">
-                                <input type="email" class="signupinputbox" placeholder="이메일" id="email" name="email" maxLength="20">
+                                <input type="email" class="signupinputbox" placeholder="이메일" id="email" name="email" maxLength="30">
                             </div>
                         </div>
                         <div class="signupmid1">
@@ -143,7 +144,7 @@
                                 <h2>Phone</h2>
                             </div>
                             <div class="signupmid1-2">
-                                <input type="text" class="signupinputbox" placeholder="휴대전화" id="phone" name="phone" maxLength="20">
+                                <input type="text" class="signupinputbox" placeholder="휴대전화" id="phone" name="phone" maxLength="11">
                             </div>
                         </div>
                     </div>
