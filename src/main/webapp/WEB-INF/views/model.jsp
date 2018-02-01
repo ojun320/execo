@@ -19,7 +19,13 @@
     var ui = "";
 	var Username = "";
 	var hash = location.hash; // url에서 hash값 가져오기.
-	if(hash == "" || hash == "#mainsec"){
+	if(hash == "" || hash == "#mainsec" || hash == "#introduce1"|| hash == "#introduce2"||
+			hash == "#introduce3"|| hash == "#introduce4" || hash == "#introducelsr" ||
+			hash == "#introducelsr1" || hash == "#introducelsr2" || hash == "#introducelsr3" ||
+			hash == "#introducelsr4" || hash == "#business1" || hash == "#business2" ||
+			hash == "#business3" || hash == "#business4" || hash == "#customer" ||
+			hash == "#customer1" || hash == "#customer2" || hash == "#notice" || hash == "#signup" ||
+			hash == "#login" || hash == "#Write" || hash == "#Write1"){
 		location.hash = "#mainsec"; // hash에 값이 없을때 초기값 설정
 		loginCheck();
 	}
@@ -183,7 +189,15 @@
 	  		htmlLoad();
 	  	});
 /**************************************************************/
-		
+		$(document).keydown(function(e){   
+	        if(e.target.nodeName != "INPUT" && e.target.nodeName != "TEXTAREA"){       
+	            if(e.keyCode === 8 || e.keyCode === 116){   
+	            return false;
+	            }
+	        }
+	    });
+	 
+	    window.history.forward(0);
 	});
     </script>	
 </head>

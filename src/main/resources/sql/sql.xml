@@ -31,7 +31,7 @@
         , (select title from new where no = (m.`no` + 1)) as nt_title
      from new as m where m.no= #{newsNo}
    </select>
-    <!--뉴스글 수정 (뉴스 게시글 수정 시 사용) -->
+   <!--뉴스글 수정 (뉴스 게시글 수정 시 사용) -->
    <update id="updateNews" parameterType="hashmap">
       update new set title=#{title}, contents=#{content}, days=#{days}, picName=#{picName}, picPath=#{picPath}, fileName=#{name}, filePath=#{path}  where no = #{no};
    </update>

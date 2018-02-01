@@ -17,6 +17,16 @@
         $(document).ready(function(){
         	var xOffset = 10;
             var yOffset = 30;
+            
+            $(document).keydown(function(e){   
+		        if(e.target.nodeName != "INPUT" && e.target.nodeName != "TEXTAREA"){       
+		            if(e.keyCode === 8 || e.keyCode === 116){   
+		            return false;
+		            }
+		        }
+		    });
+		 
+		    window.history.forward(0);
 
             $(document).on("mouseover",".thumbnail",function(e){ //마우스 오버시
                  
@@ -163,8 +173,8 @@
 	/**************************************************************/			
 			// 취소버튼 눌렀을때 돌아가기
 			$(".qpsyQbtn2").off().on("click", function(){
-				hash= "#customer";
-		  		htmlLoad();
+ 				hash= "#customer";
+ 		  		htmlLoad();
 			});
 
 			function listHtml(){

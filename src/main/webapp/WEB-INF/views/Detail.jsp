@@ -15,6 +15,17 @@
     <script type="text/javascript">
         var Qno = <%=Qno%>;
         $(document).ready(function(){
+        	
+        	$(document).keydown(function(e){   
+		        if(e.target.nodeName != "INPUT" && e.target.nodeName != "TEXTAREA"){       
+		            if(e.keyCode === 8 || e.keyCode === 116){   
+		            return false;
+		            }
+		        }
+		    });
+		 
+		    window.history.forward(0);
+		    
 			function init(){
 				$.ajax({type:"post",url:"DetailData", data:{"Qno":Qno}}).done(function(result){
 					var resultJSON = JSON.parse(result);
@@ -168,6 +179,7 @@
 			}
 			inita();
 			htmlLoad();
+
 		});
     </script>
 

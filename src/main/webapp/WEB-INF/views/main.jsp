@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	    <script type="text/javascript">
-    	
+    	var newsNo = 0;
 		var data = []; // 데이터 담을 배열 변수 선언
 		var hash = location.hash; // url에서 hash값 가져오기.
 		if(hash == ""){
@@ -170,20 +170,22 @@
   		      $(".form").empty();
   		      for(var i = 0; i<data.length; i++){
   		         tag = '<div class="listimgbox1">'+
-  							'<img src="'+data[i].picPath+data[i].picName+ '">'+
+  							'<a href="detail1?newsNo=' + data[i].no + '"><img src="'+data[i].picPath+data[i].picName+ '"></a>'+
   						'</div>'
   				$(".form").append(tag);
+  		      }
   		    }
+  		      
 
-  		    //클릭한 게시글을 찾아 자세히 보기 하기위하여 ajax 사용
-  		      $(".listimgbox1").off();
-  		      $(".listimgbox1").on("click",function(){
-  		         var index = $(".listimgbox1").index(this);
-  		         var newsNo = data[index].no;
-  		         location.href = "detail1?newsNo=" + newsNo;
-  		      });
+//   		    //클릭한 게시글을 찾아 자세히 보기 하기위하여 ajax 사용
+//   		      $(".listimgbox1").off();
+//   		      $(".listimgbox1").on("click",function(){
+//   		         var index = $(".listimgbox1").index(this);
+//   		         var newsNo = data[index].no;
+//   		         location.href = "detail1?newsNo=" + newsNo;
+//   		      });
   		         
-  		   }
+  		   
   		   
   		   function initData1(){ // 디비에서 데이터 가져오기 위한 함수
   		      var viewRow = 5;
@@ -208,9 +210,11 @@
 
   		      });
   		   }
+  		   
     		initData();
     		initData1();
     		showSlides();
+    		
         });
         </script>
         <style type="text/css">

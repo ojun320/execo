@@ -17,46 +17,12 @@
          $(document).ready(function(){
           	 var dt = [];
              var newsNo = <%=newsNo%>;
-            
-             function button(){
-               $(".btn1").off().on("click", function(ev){ // 글쓰기 페이지(write) 전환 이벤트를 작성 한다.
-                  		
-  						var form = document.forms[0];
-                        var formData = new FormData(form);
-                        if(!form.content.value){
-                            alert("내용을 입력해주세요.");
-                            form.content.focus();
-                         }else if(!form.title.value){
-                            alert("제목을 입력해주세요.");
-                            form.title.focus();
-                         }else if(!form.days.value){
-                         alert("날짜를 지정해주세요.");
-                         form.days.focus();
-                         }else if(!form.file.value){
-                         alert("파일을 선택해주세요.");
-                         form.file.focus();
-                         }else{
-                         	console.log("수정 완료!");
-                         	$.ajax({
-        	                     type:"post",
-        		                     url:"updatewrite",
-        		                     enctype: 'multipart/form-data',
-        		                     processData: false,
-        		                     contentType: false,
-        		                     cache: false,
-        		                     data: formData          
-        	                      }).done(function(d){
-        	                         dt = d.data;
-        	                        location.href="detail?newsNo="+newsNo;
-        	                      });
-                         	ev.preventDefault();
-        	                 
-                         }
-               });
 
-               $(".btn2").off().on("click", function(){ // 저장
-
-                       var form = document.forms[0];
+             $("form").on("submit", function( event ) {
+                 event.preventDefault(); //submit이 안되게 막는다 
+                 						//ajax 사용하기 때문
+                 						
+                 var form = document.forms[0];
                        var formData = new FormData(form);
                        console.log("ddd");
                        if(!form.content.value){
@@ -86,38 +52,95 @@
                                 cache: false,
                                 data: formData
                              }).done(function(d){
+                            	 alert("작성되었습니다.");
                             	 console.log("ssss");
                           	   var num = JSON.parse(d);
 
                              });
                         }
+            });
+                      
+//              function button(){
+//                $(".btn2").off().on("click", function(){ // 저장
+
+//                        var form = document.forms[0];
+//                        var formData = new FormData(form);
+//                        console.log("ddd");
+//                        if(!form.content.value){
+//                            alert("내용을 입력해주세요.");
+//                            form.content.focus();
+//                            return false;
+//                         }else if(!form.title.value){
+//                            alert("제목을 입력해주세요.");
+//                            form.title.focus();
+//                            return false;
+//                         }else if(!form.days.value){
+//  	                       alert("날짜를 지정해주세요.");
+//  	                       form.days.focus();
+//  	                       return false;
+//                         }else if(!form.file.value){
+//  	                       alert("파일을 선택해주세요.");
+//  	                       form.file.focus();
+//  	                       return false;
+//                         }else{
+                     	   
+//                             $.ajax({
+//                                 type:"post",
+//                                 url:"inwriting",
+//                                 enctype: 'multipart/form-data',
+//                                 processData: false,
+//                                 contentType: false,
+//                                 cache: false,
+//                                 data: formData
+//                              }).done(function(d){
+//                             	 console.log("ssss");
+//                           	   var num = JSON.parse(d);
+
+//                              });
+//                         }
                        
-                       hash = "#customer";
-          				htmlLoad();
-                 });
+//                         hash = "#customer";
+//           				htmlLoad();
+          				
+//           				function htmlLoad(){
+//               		  		var url = hash.substr(1, hash.length)
+//               		  		$("section").load(url);
+//               		  	}
+//                  });
                
-               function htmlLoad(){
-      		  		var url = hash.substr(1, hash.length)
-      		  		$("section").load(url);
-      		  	}
                
-               $("#fileName").off().on("click", function(){
-                  window.open(dt.filePath);
-               });
-            }
+               
+//                $("#fileName").off().on("click", function(){
+//                   window.open(dt.filePath);
+//                });
+//             }
              
-             if(newsNo == null){
-            	 console.log("버튼()");
-            	 button();
+//              if(newsNo == null){
+//             	 console.log("버튼()");
+//             	 button();
                 
-             }else{
-            	 console.log("로드()");
-            	 button();
+//              }else{
+//             	 console.log("로드()");
+//             	 button();
             	 
-             }        	 
+//              }        	 
       
 // 			button();
-// 			console.log("좆같네");
+
+
+
+
+//----------------------------------------------- 작성버튼 클릭시 부분전환-------------------------------------------------------------
+ 			$(".btn2").off().on("click",function(){
+ 				hash = "/customer";
+ 				htmlLoad();
+ 			});
+ 			
+ 			function htmlLoad(){
+ 		  		var url = hash.substr(1, hash.length)
+ 		  		$("section").load(url);
+ 		  	}
+ //------------------------------------------------------------------------------------------------------------------------------
 //----------------------------------------------- 취소버튼 클릭시 부분전환-------------------------------------------------------------
 
  			$(".qpsywriteback").off().on("click",function(){
@@ -169,7 +192,7 @@
                             </div>
                         </div>
                         <div class="Button">
-                          <button type="button" class="btn2">저장</button>
+                          <button type="submit" class="btn2">저장</button>
                           <button type="button" class="qpsywriteback">취 소</button>
                       	</div>
                      </form>

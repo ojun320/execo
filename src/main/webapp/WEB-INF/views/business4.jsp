@@ -73,25 +73,25 @@
                             
                         </div>
                         <div class="contentsbox">
-                            <a href="resources/pdf/BBSFILEevent.pdf27" target="_blank"><img src="resources/img/processingproductimg1.jpg"></a>
+                            <a href="resources/pdf/BBSFILEevent27.pdf" target="_blank"><img src="resources/img/processingproductimg1.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a href="resources/pdf/BBSFILEevent.pdf27" target="_blank"><img src="resources/img/processingproductimg2.jpg"></a>
+                            <a href="resources/pdf/BBSFILEevent27.pdf" target="_blank"><img src="resources/img/processingproductimg2.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a href="resources/pdf/BBSFILEevent.pdf27" target="_blank"><img src="resources/img/processingproductimg3.jpg"></a>
+                            <a href="resources/pdf/BBSFILEevent27.pdf" target="_blank"><img src="resources/img/processingproductimg3.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a href="resources/pdf/BBSFILEevent.pdf27" target="_blank"><img src="resources/img/processingproductimg4.jpg"></a>
+                            <a href="resources/pdf/BBSFILEevent27.pdf" target="_blank"><img src="resources/img/processingproductimg4.jpg"></a>
                         </div>
                         <div class="contentsbox1">
                             
@@ -106,25 +106,25 @@
                             
                         </div>
                         <div class="contentsbox">
-                            <a href="resources/pdf/BBSFILEevent.pdf28" target="_blank"><img src="resources/img/processingproductimg5.jpg"></a>
+                            <a href="resources/pdf/BBSFILEevent28.pdf" target="_blank"><img src="resources/img/processingproductimg5.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a href="resources/pdf/BBSFILEevent.pdf28" target="_blank"><img src="resources/img/processingproductimg6.jpg"></a>
+                            <a href="resources/pdf/BBSFILEevent28.pdf" target="_blank"><img src="resources/img/processingproductimg6.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a href="resources/pdf/BBSFILEevent.pdf29" target="_blank"><img src="resources/img/processingproductimg7.jpg"></a>
+                            <a href="resources/pdf/BBSFILEevent29.pdf" target="_blank"><img src="resources/img/processingproductimg7.jpg"></a>
                         </div>
                         <div class="contentsbox2">
                             
                         </div>
                         <div class="contentsbox">
-                            <a href="resources/pdf/BBSFILEevent.pdf30" target="_blank"><img src="resources/img/processingproductimg8.jpg"></a>
+                            <a href="resources/pdf/BBSFILEevent30.pdf" target="_blank"><img src="resources/img/processingproductimg8.jpg"></a>
                         </div>
                         <div class="contentsbox1">
                             

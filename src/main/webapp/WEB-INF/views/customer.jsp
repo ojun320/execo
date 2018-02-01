@@ -56,7 +56,7 @@
 		      $(".form").empty(); // ul 태그의 자식들를 초기화가 필요하다.
 		      for(var i = 0; i<data.length; i++){
 		         tag =  '<div class="listimgbox">'+
-						      	'<img src="'+data[i].picPath+data[i].picName+ '">'+
+						      	'<a href="detail1?newsNo=' + data[i].no + '"><img src="'+data[i].picPath+data[i].picName+ '"></a>'+
 						      '</div>'+
 						      '<div class="listtextbox">'+
 						      	'<hr>'+
@@ -82,21 +82,25 @@
 		      }
 		      
 		      
-		      //-----------------------------------------------------------------------------------------------------------------
-		      //-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+		      
+		      
+		      
+// 		    //클릭한 게시글을 찾아 자세히 보기 하기위하여 ajax 사용
+// 		      $(".listimgbox").off();
+// 		      $(".listimgbox").on("click",function(){
+// 		         var index = $(".listimgbox").index(this);
+// 		         var newsNo = data[index].no;
+// 		         location.href = "detail1?newsNo=" + newsNo;
+		         
+// 		      });
+		      
 		      var ea = totCnt + "건";
 		      $("#paginationTotalCnt").empty();
-		      $("#paginationTotalCnt").append(ea);
+		      $("#paginationTotalCnt").append(ea);   
 		      
 		      
-		    //클릭한 게시글을 찾아 자세히 보기 하기위하여 ajax 사용
-		      $(".listimgbox").off();
-		      $(".listimgbox").on("click",function(){
-		         var index = $(".listimgbox").index(this);
-		         var newsNo = data[index].no;
-		         location.href = "detail1?newsNo=" + newsNo;
-		      });
-		         
 		   }
 		   function createPaging(){
 		      

@@ -35,16 +35,16 @@ public class NewsListDao implements NewsListDaoInterface {
 	      return session.selectOne("sql.selectDetail", param);
 	}
 	
-	   @Override
+	@Override
 	   public int inwriting(HashMap<String, Object> param) {
 		   System.out.println(param);
-	   return session.insert("sql.InsertNews",param);
-	   }
+		   return session.insert("sql.InsertNews",param);
+	}
 	   
-	   @Override
+	@Override
 	   public int fileAdd(HashMap<String, Object> param) {
-	   return session.insert("sql.InsertNews", param);
-	   }
+			return session.insert("sql.InsertNews", param);
+	}
 	
 	
 }
